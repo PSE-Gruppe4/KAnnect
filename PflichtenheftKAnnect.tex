@@ -1,0 +1,295 @@
+\documentclass[parskip=full]{scrartcl}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[ngerman]{babel} %ngermen = new german
+\usepackage{hyperref}
+\hypersetup{pdftitle= {PSE: Pflichtenheft,
+		bookmarks=true,
+}}
+\usepackage{csquotes}
+\usepackage{graphicx}
+\usepackage{enumitem}
+\usepackage[margin=2.5cm]{geometry}
+	\title{KAnnect}
+	\subtitle{Pflichtenheft}
+	\subject{Praxis der Softwareentwicklung}
+	\author{
+		Amani
+		\and Zeineb
+		\and Mohammed
+		\and Ibrahim
+		\and Utku Erol
+		\and Florian Giner
+	}
+	\date{Sommersemester 2018}
+	
+\begin{document}
+
+	\maketitle
+	\newpage
+	\tableofcontents
+	\newpage
+	\setlength{\parindent}{0em}
+	\setlength{\parskip}{0.5em}
+	
+	\section{Zielbestimmung}
+	Die Nutzer sollen durch das Produkt in die Lage versetzt werden, leicht Informationen über Veranstaltungen rund um das Studium am
+	KIT und um das Leben in Karlsruhe zu erlangen, sowie sich darüber zu unterhalten.
+	
+	\subsection{Musskriterien}
+	
+	\begin{itemize}
+		\item Verwalten von Veranstaltungen
+			\begin{itemize} 
+				
+				\item Erstellen, Löschen, Ändern, Suchen, Veranstaltungen abonnieren
+				\item Hochladen von einem Bild als Hintergrund
+				\item Ersteller hat Admin Rechte
+			\end{itemize}
+			
+			\item Verwalten von Gruppen
+				\begin{itemize}
+					\item Erstellen, löschen, Ändern, Suchen, Speichern, Gruppen abonnieren
+					\item Ersteller hat Admin Rechte
+				\end{itemize}
+			\item Verwalten von Kontakten
+				\begin{itemize}
+					\item Erstellen, löschen, Ändern, Suchen, Speichern, Kontakte abonnieren
+					\item Erstellen des Benutzerkontos über Google Play
+				\end{itemize}
+			\item In-App Kommunikation
+			\begin{itemize}
+				\item versenden, erhalten von Nachrichten
+				\item Veröffentlichung von Beiträgen von Nutzern
+			\end{itemize}
+			\item Beiträge im Feed darstellen
+				\begin{itemize}
+					\item von gefolgten Kontakten/Gruppen/Veranstaltungen
+					\item anwenden von Filterkriterien
+					\item chronologische Reihenfolge nach Veröffentlichungsdatum
+				\end{itemize}
+			\item Kommentieren von Beiträgen
+				\begin{itemize}
+					\item Speichern chronologisch , löschen, Ändern
+				\end{itemize}	
+	\end{itemize}
+	
+	\subsection{Wunschkriterien}
+		\begin{itemize}[nosep]
+			\item Sofortige Nachrichtenübermittlung
+			\begin{itemize}
+				\item erstellen und löschen von Konversationen und Gruppenkonversationen
+				\item speichern der Nachrichten
+				\item synchronisation aller Geräte
+			\end{itemize}
+			
+			\item Karte von Karlsruhe
+				\begin{itemize}
+					\item zeigt alle Veranstaltungen des heutigen Tages und deren Ort
+				\end{itemize}
+			\item Verwalten von Geschäftskonten
+				\begin{itemize}
+					\item erstellen, löschen, Ändern, Suchen, Speichern
+				\end{itemize}
+			\item anbieten von Werbeflächen
+				\begin{itemize}
+					\item für Geschäftskonten
+				\end{itemize}
+			\item Sicherheit
+				\begin{itemize}
+					\item Kundendaten die über das Internet vermittelt \item werden sollen verschlüsselt werden
+				\end{itemize}
+			\item hochladen von Fotos und Videos
+				\begin{itemize}
+					\item für Nutzer und Geschäftskonten
+				\end{itemize}
+			\item Admin Rechte sollen weitergegeben werden können an andere Nutzer
+			\item Chat mit zufälligen Nutzern
+				\begin{itemize}
+					\item Instant Messaging, Videochat und Sprach Chat
+					\item mit anderen Nutzern die auch online sind, die diese Dienst auch nutzen wollen
+				\end{itemize}
+			\item Markieren  von Benutzern auf Beiträgen, in Gruppen und Veranstaltungen
+			\item Chat mit zufälligen Nutzern
+				\begin{itemize}
+					\item Instant Messaging, Videochat und Sprach Chat
+					\item mit anderen Nutzern die auch online sind, die diese Dienst auch nutzen wollen
+				\end{itemize}
+			\item Plattformunabhängigkeit
+				\begin{itemize}
+					\item das Produkt soll auf allen Plattformen erhältlich sein
+					\item zB für iOS und Windows
+				\end{itemize}
+			\item Anmeldung mit anderen Services möglich
+				\begin{itemize}
+					\item zB Apple Account, Facebook Account, Twitter Account
+				\end{itemize}
+			\item Ändern der Sprache der App
+				\begin{itemize}
+					\item nicht nur Deutsch, sondern auch auf Englisch
+				\end{itemize}
+			\item Jobbörse für Unternehmen die Werkstudenten suchen
+				\begin{itemize}
+					\item erstellen, löschen, ändern, Suchen, Speichern von Stellenangeboten
+				\end{itemize}
+			\item private Gruppen
+				\begin{itemize}
+					\item erstellen, löschen, ändern und Speichern von privaten Gruppen
+					\item nur eingeladene Nutzern können Gruppen beitreten	
+				\end{itemize}
+		\end{itemize}
+		
+	\subsection{Abgrenzungskriterien}
+	\begin{itemize}
+		\item Das Produkt soll nur auf Mobilfunk Telefone erhältlich sein.
+		\item Kein Marketplace
+	\end{itemize}
+	
+	\section{Produkteinsatz}
+	Das Produkt soll eine Plattform bereitstellen, die das alltägliche Leben und Studieren in Karlsruhe nicht nur erleichtert, sondern auch verbindet. So sollen Nutzer leicht an Informationen über Veranstaltungen der jeweiligen Hochschule gelangen, wie auch an Informationen über Freizeitaktivitäten. Desweiteren bietet das Produkt noch die Möglichkeit sich leicht darüber zu unterhalten und Meinungen mit anderen Nutzern zu teilen.
+	
+	\subsection{Anwendungsbereiche}
+		\begin{itemize}
+			\item Akademischer Bereich
+			\item Sozialer Bereich
+		\end{itemize}
+		
+	\subsection{Zielgruppen}
+		\begin{itemize}
+			\item Studenten
+			\item Mitarbeiter der Hochschulen in Karlsruhe
+			\item Veranstalter
+			% noch für private Personen?
+		\end{itemize}
+		
+	\subsection{Betriebsbedingungen}
+	
+	
+	\section{Produktumgebung}
+	
+	\subsection{Software}
+	
+	\subsection{Hardware}
+	
+	
+	\section{Funktionale Anforderungen}
+		\subsection{Freunde}
+		\begin{itemize}[itemsep=0pt]
+			\item[\textbf{FA10}]\textbf{Freund suchen}
+			\newline\newline \textbf{Ziel:} Suche nach einem Freund mithilfe seines Namens
+			\newline\newline \textbf{Kategorie:} primär
+			\newline\newline \textbf{Vorbedingungen:} Nutzer muss ein Konto besitzen
+			\newline\newline \textbf{Nachbedingungen (Erfolg):} Liste von Personen die den eingetippten Namen haben.
+			\newline\newline \textbf{Nachbedingungen (Fehlschlag):}  Wenn keine Person diesen Namen besitzt, wird eine leere Seite mit einer Fehlernachricht angezeigt.
+			\newline\newline \textbf{Akteure:} Nutzer
+			\newline\newline \textbf{Auslösendes Ereignis:} Anfrage des Nutzers
+			\newline\newline \textbf{Beschreibung:}
+				\begin{enumerate}[nosep]
+					\item bla 
+					\item bla\\
+				\end{enumerate}
+			
+			\item[\textbf{\large FA20}]\textbf{\large Freund abonnieren}
+			\item[\textbf{\large FA30}]\textbf{\large Freund nicht mehr abonnieren}
+		\end{itemize}
+		
+		\subsection{Gruppe}
+		\begin{itemize}[nosep]
+			\item[\textbf{FA40}]\textbf{Gruppe erstellen}
+			\item[\textbf{FA50}]\textbf{Gruppe löschen}
+			\item[\textbf{FA60}]\textbf{Gruppe beitreten}
+			\item[\textbf{FA70}]\textbf{Gruppe verlassen}
+			\item[\textbf{FA80}]\textbf{Beitrag in Gruppen}
+		\end{itemize}
+		
+		\subsection{Veranstaltungen}
+		\begin{itemize}[nosep]
+			\item[\textbf{FA90}]\textbf{Veranstaltung erstellen}
+			\item[\textbf{FA100}]\textbf{Veranstaltung löschen}
+			\item[\textbf{FA110}]\textbf{Beitrag in Veranstaltungen}
+			\item[\textbf{FA120}]\textbf{Veranstaltung abonnieren}
+			\item[\textbf{FA130}]\textbf{Veranstaltung nicht mehr abonnieren}
+			\item[\textbf{FA140}]\textbf{Veranstaltung bearbeiten}
+		\end{itemize}
+		
+		\subsection{Beiträge}
+		\begin{itemize}[nosep]
+			\item[\textbf{FA150}]\textbf{Beitrag veröffentlichen}
+			\item[\textbf{FA160}]\textbf{Beitrag löschen}
+			\item[\textbf{FA170}]\textbf{Beitrag bearbeiten}
+			\item[\textbf{FA180}]\textbf{Beitrag mit "Gefällt mir" markieren}
+			\item[\textbf{FA190}]\textbf{Beiträge kommentieren}
+		\end{itemize}
+		
+		\subsection{Konto}
+		\begin{itemize}[nosep]
+			\item[\textbf{FA200}]\textbf{Konto erstellen}
+			\item[\textbf{FA210}]\textbf{Konto löschen}
+			\item[\textbf{FA220}]\textbf{anmelden}
+			\item[\textbf{FA230}]\textbf{abmelden}
+		\end{itemize}
+		
+		\subsection{Nachrichten}
+		\begin{itemize}[nosep]
+			\item[\textbf{FA240}]\textbf{Nachrichten schicken}
+			\item[\textbf{FA250}]\textbf{ Nachrichten empfangen}
+		\end{itemize}
+		
+		\subsection{Feed}
+		\begin{itemize}[nosep]
+			\item[\textbf{FA260}]\textbf{Feed aktualisieren}
+		\end{itemize}
+	\section{Produktdaten}
+	
+	\section{Nichfunktionale Anforderungen}
+	
+	\section{Globale Testfälle}
+	
+	\section{Systemmodelle}
+	\subsection{Szenarien}
+		\subsubsection{Registrierung}
+		Bob möchte sich über die Veranstaltungen an den Hochschulen in Karlsruhe informieren, Beiträge von Gruppen sehen und kommentieren. Deswegen geht er auf Google-Play, um eine passende App zu finden. Er findet KAnnect und ist sofort überzeugt. Er klickt auf den "Herunterladen" Button. Nach der Installation öffnet Bob die App und klickt auf “Neues Konto erstellen”. Bob registriert sich erfolgreich mit seinem Google-Konto. Dann wird er zu seinem Feed weitergeleitet.
+		
+		\subsubsection{Freunde}
+		Alex ist ein neuer Student in Karlsruhe.  Während der O-Phase hat er einen Kommilitonen kennengelernt, namens Bob. Um die Kommunikation zu erleichtern, hat Bob Alex empfohlen, die neue App  KAnnect zu installieren und ihn zu abonnieren. Zu Hause gibt Alex den Namen Bob im Suchfeld ein. Danach klickt er auf den Button ‘Abonnieren’. Dadurch bekommt er jetzt alle Beiträge von Bob auf seinem Feed angezeigt. Am Wochenende hat Alex Lust mit Bob feiern zu gehen, deswegen hat er ihm eine Nachricht über KAnnect geschrieben. Nach einigen Minuten öffnet er seine Mailbox und sieht, dass er eine Antwort von Bob erhalten hat. Der bestätigt das Treffen in einer Stunde am Schloss. Nach zwei Stunden warten am Schloss, beschließt Alex, sehr erzürnt, heimzugehen. Daheim angelangt geht Alex auf KAnnect und öffnet Bobs Profil und klickt “nicht mehr abonnieren”.
+		
+		\subsubsection{Gruppen}
+		Die neue Hochschulgruppe „Technologien für Studenten“ möchte ihre Neuigkeiten den Studenten präsentieren. Alex, ein Verantwortlicher der Gruppe meldet sich mit seinem Konto an. Er drückt in der App auf “Gruppe erstellen” und muss nun ein Formular ausfüllen. Nachdem er das gemacht hat, drückt er “Bestätigen” und die Gruppe wird zu der Liste der gefolgten Gruppen hinzugefügt %Link zu GUI
+		Bob ist ein Student und interessiert sich für diese Gruppe. Er meldet sich in der App an und gibt den Namen der Gruppe in das Suchfeld ein. Nun wird ihm die gesuchte Gruppe angezeigt. Er klickt auf „Gruppe beitreten“ und kann nun alle Beiträge in der Gruppe sehen. Diese werden ihm nun auch in seinem Feed angezeigt. Bob fragt sich, wie man Mitglied der Hochschulgruppe werden kann, weshalb er einen Beitrag in der Gruppe veröffentlicht. Nach rund fünf Minuten sieht Alex den Beitrag von Bob und erklärt den Bewerbungsprozess, indem er den Beitrag kommentiert. Da Alex davon ausgeht, dass noch mehr Leute dieselbe Frage haben, verfasst er einen Beitrag über den Bewerbungsprozess und veröffentlicht diesen in der Gruppe. Nach der Veröffentlichung bemerkt Alex, dass er einen veralteten Prozess erläutert hat. Deswegen klickt er auf „Beitrag löschen“.
+		Da Bob nach einer Woche immer noch keine richtige Antwort erhalten hat, tritt er aus der Gruppe aus.
+		Bob bemerkt, dass seine Gruppe “O-Phase 2014” nicht mehr aktiv ist, und will sie löschen. Er geht auf der Seite der Gruppe und klickt auf „Gruppe löschen“. Nachdem er “Bestätigen” klickt, wird die Gruppe gelöscht.
+		
+		\subsubsection{Veranstaltungen}
+		Manfred Maier ist ein Student in Karlsruhe. Die Klausurenphase ist endlich vorbei. Er hat Lust heute Nachmittag etwas zu machen, aber weiß nicht genau was. Er fragt seinen besten Freund Siegfried, was heute in Karlsruhe abgeht. Leider kann er auch nichts Besonderes vorschlagen und sagt, dass sie KAnnect checken sollen. Manfred denkt, dass es eine sehr gute Idee ist, und öffnet die App.
+		Auf der Hauptseite klickt er auf den Button "Veranstaltungen" und befindet sich nun auf einer neuen Seite, auf der alle Veranstaltungen nach Datum sortiert sind. Oben sind die Veranstaltungen, die heute stattfinden werden, weiter unten die der kommenden Tage und Wochen.
+		Da ihm so viele Veranstaltungen angezeigt werden, will er die Veranstaltungen filtern. Er klickt auf "eine Veranstaltungskategorie wählen" und sieht alle Kategorien wie "Sport" "Studium" "Nightclubs" "Bars \& Pubs" "Essen" usw. 
+		Dann wählt er "Bars \& Pubs" und die Seite aktualisiert sich. Nun werden nur die Veranstaltungen angezeigt, die etwas mit der Kategorie zu tun haben.
+		Er sieht, dass eine Bar heute von 17 bis 19 Uhr Happy Hour mit Live Musik anbietet. Er klickt auf die Veranstaltung, um weitere Details zu sehen. Er befindet sich nun auf der Seite der Veranstaltung. Dort werden ihm veröffentlichte Beiträge der Veranstaltung angezeigt. Nach einer kurzen Diskussion, entscheiden sich Manfred und Siegfried in diese Bar zu gehen. Um neue Informationen über die Veranstaltung in seinem Feed angezeigt zu bekommen, klickt Manfred auf "Veranstaltung abonnieren". Außerdem wollen sie später noch zu irgendeiner Party gehen. Ganz oben auf der Veranstaltungsseite ist ein Suchfeld "Veranstaltungen suchen". Da gibt er "Party" ein und die Seite aktualisiert sich. Nun werden ihm alle Veranstaltungen die das Schlüsselwort "Party" haben angezeigt. Er mag diese Veranstaltungen nicht und entscheidet sich, eine eigene Party zu schmeißen. Er redet mit Siegfried und sie machen die Partyvorbereitungen zusammen. Sie wollen jeden einladen, der mitfeiern will. Er geht auf "Erstelle neue Veranstaltung" und bekommt ein Formular von der App: 
+		
+		%link zu gui
+		
+		Nachdem er es fertig ausgefüllt hat, bestätigt er das Erstellen der Veranstaltung und wird zu der Seite seiner Veranstaltung weitergeleitet. Er kontrolliert die Seite noch mal und sieht, dass er eine falsche Adresse eingegeben hat. Er klickt auf "Veranstaltung bearbeiten" und wird wieder zu dem Formular geleitet.Nun korrigiert er seinen Fehler und bestätigt seine Änderungen und kommt wieder zurück zu der Veranstaltungsseite.
+		
+		Eine Woche später möchte er wieder so eine Party schmeißen und erstellt wieder eine neue Veranstaltung in der App. Am nächsten Tag bekommt er seine Klausurergebnisse und ihm gefallen seine Noten überhaupt nicht. Deswegen möchte er sich mehr auf sein Studium konzentrieren und sagt die Party ab. Er öffnet KAnnect und navigiert auf die Seite seiner erstellten Veranstaltung. Dann klickt er auf “Veranstaltung löschen”.
+		
+		\subsubsection{Feed}
+		Bob öffnet KAnnect und möchte sein Feed durchschauen. Er sieht die Beiträge seiner Freunde, seiner abonnierten Veranstaltungen und seiner gefolgten Gruppen in chronologische Reihenfolge.
+		Bob will auf ein Beitrag reagieren , er klickt “Gefällt mir”, weil ein Freund von ihm was Lustiges gepostet hat. Er ist die 16.te Person, die den Beitrag mit “Gefällt mir” markiert hat. Außerdem kommentiert er den Beitrag, daraufhin merkt er, dass auch diese chronologisch sortiert sind.
+		
+	\subsection{Anwendungsfälle}
+	
+	\section{Grafische Benutzeroberfläche}
+	
+	\section{Durchführbarkeitsanalyse}
+	
+	\subsection{Technische Durchführbarkeit}
+	\subsection{Personelle Durchführbarkeit}
+	\subsection{Alternative Lösungsvorschläge}
+	\subsection{Risiken}
+	
+	
+		
+	
+	
+\end{document}
