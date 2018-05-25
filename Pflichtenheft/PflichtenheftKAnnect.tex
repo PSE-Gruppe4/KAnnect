@@ -25,7 +25,7 @@
 	\date{Sommersemester 2018}
 	
 \begin{document}
-
+	%\input{Deckblatt.tex}
 	\maketitle
 	\newpage
 	\tableofcontents
@@ -175,51 +175,452 @@
 	
 	\section{Funktionale Anforderungen}
 		\subsection{Freunde}
-		\begin{itemize}[itemsep=0pt]
+		\begin{itemize}[nosep]
+			% Freund suchen
 			\item[\textbf{FA10}]\textbf{Freund suchen}
 			\newline\newline \textbf{Ziel:} Suche nach einem Freund mithilfe seines Namens
-			\newline\newline \textbf{Kategorie:} primär
-			\newline\newline \textbf{Vorbedingungen:} Nutzer muss ein Konto besitzen
-			\newline\newline \textbf{Nachbedingungen (Erfolg):} Liste von Personen die den eingetippten Namen haben.
-			\newline\newline \textbf{Nachbedingungen (Fehlschlag):}  Wenn keine Person diesen Namen besitzt, wird eine leere Seite mit einer Fehlernachricht angezeigt.
-			\newline\newline \textbf{Akteure:} Nutzer
-			\newline\newline \textbf{Auslösendes Ereignis:} Anfrage des Nutzers
-			\newline\newline \textbf{Beschreibung:}
+			\newline \textbf{Kategorie:} primär
+			\newline \textbf{Vorbedingungen:} Nutzer muss ein Konto besitzen
+			\newline \textbf{Nachbedingungen (Erfolg):} 
+			\begin{enumerate}[nosep]
+				\item Liste von Personen die den eingetippten Namen haben.
+			\end{enumerate}
+			\textbf{Nachbedingungen (Fehlschlag):} 
+			\begin{enumerate}[nosep]
+				\item Wenn keine Person diesen Namen besitzt, wird eine leere Seite mit einer Fehlernachricht angezeigt.
+			\end{enumerate}  
+			\textbf{Akteure:} Nutzer
+			\newline \textbf{Auslösendes Ereignis:} Anfrage des Nutzers
+			\newline \textbf{Beschreibung:}
 				\begin{enumerate}[nosep]
-					\item bla 
-					\item bla\\
+					\item Im Suchfeld den Name und Vorname eintippen
+					\item “Suche” klicken
+					\item[3.a.] Eine Liste von Personen mit dem eingetippten Namen wird angezeigt (Erfolg)
+					\item[3.b.] Sonst wird eine leere Seite mit einer Fehlernachricht angezeigt (Fehlschlag) \\
 				\end{enumerate}
 			
+			% Freund abonnieren
 			\item[\textbf{\large FA20}]\textbf{\large Freund abonnieren}
+				\newline\newline \textbf{Ziel:} Beiträge des Freundes angezeigt zu bekommen
+				\newline \textbf{Kategorie:} primär
+				\newline \textbf{Vorbedingungen:} Nutzer und Freund müssen ein Konto besitzen
+				\newline \textbf{Nachbedingungen (Erfolg):} 
+				\begin{enumerate}[nosep]
+					\item Freund wird zu der Abonnentenliste von dem Nutzer hinzugefügt
+					\item “Abonnieren” Button wird zu “Nicht mehr abonnieren” Button
+				\end{enumerate}
+				\textbf{Nachbedingungen (Fehlschlag):}
+				\newline \textbf{Akteure:} Nutzer
+				\newline \textbf{Auslösendes Ereignis:} Anfrage des Nutzers
+				\newline \textbf{Beschreibung:}
+				\begin{enumerate}[nosep]
+					\item Zu dem gewünschten Konto Profil navigieren
+					\item Button “abonnieren” klicken
+				\end{enumerate}
+			
+			% Freund nicht mehr abonnieren
 			\item[\textbf{\large FA30}]\textbf{\large Freund nicht mehr abonnieren}
+				\newline \textbf{Ziel:} Freund aus der Liste der Abonnenten löschen, damit seine Beiträge nicht mehr im Feed erscheinen
+				\newline \textbf{Kategorie:} primär
+				\newline \textbf{Vorbedingungen:} Freund muss schon abonniert sein
+				\newline \textbf{Nachbedingungen (Erfolg):} 
+				\begin{enumerate}[nosep]
+					\item Freund wird aus der Liste der Abonnenten des Nutzers gelöscht
+					\item “nicht mehr abonnieren” Button wird zu “Abonnieren” Button
+				\end{enumerate}
+				\textbf{Nachbedingungen (Fehlschlag):}
+				\newline \textbf{Akteure:} Nutzer
+				\newline \textbf{Auslösendes Ereignis:} Anfrage des Nutzers
+				\newline \textbf{Beschreibung:}
+				\begin{enumerate}[nosep]
+					\item Zu der Profilseite des Freundes navigieren
+					\item Auf Button “nicht mehr abonnieren” klicken
+				\end{enumerate}
 		\end{itemize}
 		
 		\subsection{Gruppe}
 		\begin{itemize}[nosep]
+			%Gruppe erstellen
 			\item[\textbf{FA40}]\textbf{Gruppe erstellen}
+			\newline \textbf{Ziel:} eine Gruppe erstellen
+			\newline \textbf{Kategorie:} primär
+			\newline \textbf{Vorbedingungen:} Nutzer muss angemeldet sein
+			\newline \textbf{Nachbedingungen (Erfolg):} 
+			\begin{enumerate}[nosep]
+				\item Nutzer wird zur Seite der Gruppe weitergeleitet
+				\item Gruppe wird zur Liste der gefolgten Gruppen des Erstellers hinzugefügt
+				\item Gruppe wird für andere Nutzer sichtbar
+			\end{enumerate}
+			\textbf{Nachbedingungen (Fehlschlag):}
+			\newline \textbf{Akteure:} Nutzer
+			\newline \textbf{Auslösendes Ereignis:} Anfrage des Nutzers
+			\newline \textbf{Beschreibung:}
+			\begin{enumerate}[nosep]
+				\item Zur Seite der Gruppen navigieren
+				\item Auf Button “Gruppe Erstellen” klicken
+				\item Ein Formular wird angezeigt , welches ausgefüllt werden muss
+				\item Dann auf “Bestätigen” klicken
+				\item Nutzer wird nun zur Seite der erstellten Gruppe weitergeleitet\\
+			\end{enumerate}
+			
+			% Gruppe löschen
 			\item[\textbf{FA50}]\textbf{Gruppe löschen}
+						\newline \textbf{Ziel:} nicht mehr benötigte Gruppen löschen
+						\newline \textbf{Kategorie:} primär
+						\newline \textbf{Vorbedingungen:} Gruppe ist schon vorhanden
+						\newline \textbf{Nachbedingungen (Erfolg):} 
+						\begin{enumerate}[nosep]
+							\item Gruppe wird aus System gelöscht
+							\item Bestätigungsnachricht wird angezeigt
+						\end{enumerate}
+						\textbf{Nachbedingungen (Fehlschlag):}
+						\newline \textbf{Akteure:} Ersteller der Gruppe
+						\newline \textbf{Auslösendes Ereignis:} Anfrage des Erstellers der Gruppe
+						\newline \textbf{Beschreibung:}
+						\begin{enumerate}[nosep]
+							\item Auf die Seite der zu löschende Gruppe navigieren
+							\item Auf den Button “Löschen” klicken
+							\item Aktion bestätigen\\
+						\end{enumerate}
+						
+			% Gruppe beitreten
 			\item[\textbf{FA60}]\textbf{Gruppe beitreten}
+				\newline \textbf{Ziel:} Gruppenbeiträge angezeigt bekommen und neue Gruppenbeiträge veröffentlichen
+				\newline \textbf{Kategorie:} primär
+				\newline \textbf{Vorbedingungen:} Gruppe ist schon vorhanden
+				\newline \textbf{Nachbedingungen (Erfolg):} 
+					\begin{enumerate}[nosep]
+						\item Nutzer wird zu der Abonnentenliste der Gruppe hinzugefügt und es wird eine Bestätigungsnachricht angezeigt
+						\item ”Gruppe beitreten” Button wird zu “aus Gruppe austreten” 
+					\end{enumerate}
+				\textbf{Nachbedingungen (Fehlschlag):}
+				\newline \textbf{Akteure:} Nutzer
+				\newline \textbf{Auslösendes Ereignis:} Anfrage des Nutzers
+				\newline \textbf{Beschreibung:}
+					\begin{enumerate}[nosep]
+						\item Auf die Seite der Gruppe navigieren
+						\item Auf den Button “Beitreten” klicken
+						\item Anzeigen einer Bestätigungsnachricht\\
+					\end{enumerate}
+									
+			% Gruppe verlassen
 			\item[\textbf{FA70}]\textbf{Gruppe verlassen}
-			\item[\textbf{FA80}]\textbf{Beitrag in Gruppen}
+				\newline \textbf{Ziel:} Gruppenbeiträge nicht mehr angezeigt zu bekommen
+				\newline \textbf{Kategorie:} primär
+				\newline \textbf{Vorbedingungen:} Benutzer ist Mitglied der vorhandenen Gruppe
+				\newline \textbf{Nachbedingungen (Erfolg):} 
+				\begin{enumerate}[nosep]
+					\item Nutzer wird von der Abonnentenliste der Gruppe entfernt
+					\item Eine Bestätigungsnachricht wird angezeigt
+					\item ”Gruppe verlassen” Button wird zu “Gruppe beitreten” 
+				\end{enumerate}
+				\textbf{Nachbedingungen (Fehlschlag):}
+				\newline \textbf{Akteure:} Mitglied der Gruppe
+				\newline \textbf{Auslösendes Ereignis:} Anfrage eines Mitglieds der Gruppe
+				\newline \textbf{Beschreibung:}
+				\begin{enumerate}[nosep]
+					\item Auf die Seite der Gruppe navigieren
+					\item Auf den Button “Verlassen” klicken
+					\item Anzeigen einer Bestätigungsnachricht\\
+				\end{enumerate}
+							
+			% Beitrag in Gruppen
+			\item[\textbf{FA80}]\textbf{Beitrag in Gruppe veröffentlichen}
+				\newline \textbf{Ziel:} Kommunikation in der Gruppe
+				\newline \textbf{Kategorie:} primär
+				\newline \textbf{Vorbedingungen:} Nutzer ist Mitglied der Gruppe
+				\newline \textbf{Nachbedingungen (Erfolg):} 
+				\begin{enumerate}[nosep]
+					\item Es wird ein neuer Beitrag in der Gruppe veröffentlicht 
+				\end{enumerate}
+				\textbf{Nachbedingungen (Fehlschlag):}
+				\newline \textbf{Akteure:} Mitglied der Gruppe
+				\newline \textbf{Auslösendes Ereignis:} Anfrage eines Mitglieds der Gruppe
+				\newline \textbf{Beschreibung:}
+				\begin{enumerate}[nosep]
+					\item Auf die Seite der Gruppe navigieren
+					\item Beitrag schreiben und auf den Button “Veröffentlichen” klicken
+					\item  Beitrag erscheint im Feed der Gruppe\\
+				\end{enumerate}
+		
+		% Beitrag in Gruppe löschen
+		\item[\textbf{FA80}]\textbf{Beitrag in Gruppe löschen}
+			\newline \textbf{Ziel:} Beiträge aus dem System löschen
+			\newline \textbf{Kategorie:} primär
+			\newline \textbf{Vorbedingungen:} Nutzer hat Beitrag verfasst oder ist Ersteller der Gruppe und Beitrag muss vorhanden sein
+			\newline \textbf{Nachbedingungen (Erfolg):} 
+			\begin{enumerate}[nosep]
+				\item Beitrag wird aus dem System gelöscht
+				\item Beitrag wird nicht mehr angezeigt 
+			\end{enumerate}
+			\textbf{Nachbedingungen (Fehlschlag):}
+			\newline \textbf{Akteure:} Ersteller der Gruppe oder Verfasser des Beitrags
+			\newline \textbf{Auslösendes Ereignis:} Anfrage des Erstellers der Gruppe oder des Verfassers des Beitrags
+			\newline \textbf{Beschreibung:}
+			\begin{enumerate}[nosep]
+				\item Auf die Seite der Gruppe navigieren
+				\item Zu dem zu löschenden Beitrag navigieren
+				\item Auf den Button “Beitrag löschen” klicken
+				\item Aktion bestätigen
+				\item Anzeigen einer Bestätigungsnachricht
+				\item Beitrag verschwindet aus dem Feed der Gruppe\\
+			\end{enumerate}
+						
+		% Beitrag in Gruppe bearbeiten		
+		\item[\textbf{FA80}]\textbf{Beitrag in Gruppe bearbeiten}
+			\newline \textbf{Ziel:} ein veröffentlichter Beitrag in einer Gruppe ändern
+			\newline \textbf{Kategorie:} primär
+			\newline \textbf{Vorbedingungen:} Gruppe und Beitrag sind vorhanden, Nutzer muss Beitrag verfasst haben oder Ersteller der Gruppe sein
+			\newline \textbf{Nachbedingungen (Erfolg):} 
+			\begin{enumerate}[nosep]
+				\item Beitrag wird geändert 
+			\end{enumerate}
+			\textbf{Nachbedingungen (Fehlschlag):}
+			\newline \textbf{Akteure:} Ersteller des Beitrags
+			\newline \textbf{Auslösendes Ereignis:} Anfrage des Erstellers des Beitrags
+			\newline \textbf{Beschreibung:}
+			\begin{enumerate}[nosep]
+				\item Auf die Seite der Gruppe navigieren
+				\item Zu dem Beitrag der geändert werden soll navigieren
+				\item Auf “Beitrag bearbeiten” klicken
+				\item Beitrag bearbeiten
+				\item ”Änderungen speichern” klicken
+				\item Geänderter Beitrag erscheint im Feed der Gruppe\\
+			\end{enumerate}
+						
 		\end{itemize}
 		
 		\subsection{Veranstaltungen}
 		\begin{itemize}[nosep]
+			
+			%Veranstaltung erstellen
 			\item[\textbf{FA90}]\textbf{Veranstaltung erstellen}
+				\newline \textbf{Ziel:} Bekanntmachung von Veranstaltungen, Werbemöglichkeit für eine Veranstaltung
+				\newline \textbf{Kategorie:} primär
+				\newline \textbf{Vorbedingungen:} Jeder Nutzer kann eine Veranstaltung erstellen
+				\newline \textbf{Nachbedingungen (Erfolg):} 
+				\begin{enumerate}[nosep]
+					\item Veranstaltung wird in die Liste der Veranstaltungen hinzugefügt 
+				\end{enumerate}
+				\textbf{Nachbedingungen (Fehlschlag):}
+				\newline \textbf{Akteure:} Nutzer
+				\newline \textbf{Auslösendes Ereignis:} Anfrage des Nutzers
+				\newline \textbf{Beschreibung:}
+				\begin{enumerate}[nosep]
+					\item zu der Seite der Veranstaltungen navigieren
+					\item Auf den Button “Veranstaltung erstellen” klicken
+					\item Formular wird angezeigt, das ausgefüllt werden muss
+					\item Auf “Bestätigen” klicken
+					\item Nutzer wird zur Seite der Veranstaltung weitergeleitet\\
+				\end{enumerate}
+				
+			%Veranstaltung löschen
 			\item[\textbf{FA100}]\textbf{Veranstaltung löschen}
-			\item[\textbf{FA110}]\textbf{Beitrag in Veranstaltungen}
+				\newline \textbf{Ziel:} Veranstaltung aus dem System löschen
+				\newline \textbf{Kategorie:} primär
+				\newline \textbf{Vorbedingungen:} Veranstaltung muss vorhanden sein, Nutzer muss Ersteller sein
+				\newline \textbf{Nachbedingungen (Erfolg):} 
+				\begin{enumerate}[nosep]
+					\item Veranstaltung wird aus Liste der Veranstaltungen gelöscht
+					\item Veranstaltung wird aus dem System gelöscht
+				\end{enumerate}
+				\textbf{Nachbedingungen (Fehlschlag):}
+				\newline \textbf{Akteure:}  Nutzer (Ersteller der Veranstaltung)
+				\newline \textbf{Auslösendes Ereignis:} Anfrage des Nutzers
+				\newline \textbf{Beschreibung:}
+				\begin{enumerate}[nosep]
+					\item Auf die Seite der Veranstaltung navigieren
+					\item Auf den Button “Veranstaltung löschen” klicken
+					\item Aktion bestätigen
+					\item Anzeigen einer Bestätigungsnachricht\\
+				\end{enumerate}
+			
+			%Veranstaltung abonnieren
 			\item[\textbf{FA120}]\textbf{Veranstaltung abonnieren}
+			\newline \textbf{Ziel:} Neuigkeiten und Informationen der Veranstaltung im Feed erhalten
+			\newline \textbf{Kategorie:} primär
+			\newline \textbf{Vorbedingungen:} Veranstaltung muss vorhanden sein, Nutzer muss ein Konto haben
+			\newline \textbf{Nachbedingungen (Erfolg):} 
+			\begin{enumerate}[nosep]
+				\item Nutzer wird zu der Abonnentenliste der Veranstaltung hinzugefügt
+				\item “Veranstaltung abonnieren” Button wird zu “ Veranstaltung nicht mehr abonnieren” 
+			\end{enumerate}
+			\textbf{Nachbedingungen (Fehlschlag):}
+			\newline \textbf{Akteure:} Nutzer
+			\newline \textbf{Auslösendes Ereignis:} Anfrage des Nutzers
+			\newline \textbf{Beschreibung:}
+			\begin{enumerate}[nosep]
+				\item Auf die Seite der Veranstaltung navigieren
+				\item Auf den Button “Veranstaltung abonnieren” klicken\\
+			\end{enumerate}
+						
+						
+			%Veranstaltung nicht mehr abonnieren
 			\item[\textbf{FA130}]\textbf{Veranstaltung nicht mehr abonnieren}
+			\newline \textbf{Ziel:} Veranstaltungs Neuigkeiten und Beiträge nicht mehr im Feed angezeigt zu bekommen
+			\newline \textbf{Kategorie:} primär
+			\newline \textbf{Vorbedingungen:} Nutzer muss die Veranstaltung abonniert haben
+			\newline \textbf{Nachbedingungen (Erfolg):} 
+			\begin{enumerate}[nosep]
+				\item Nutzer wird aus der Abonnentenliste der Veranstaltung entfernt
+				\item ”Veranstaltung nicht mehr abonnieren” Button wird zu “Veranstaltung abonnieren 
+			\end{enumerate}
+			\textbf{Nachbedingungen (Fehlschlag):}
+			\newline \textbf{Akteure:} Nutzer
+			\newline \textbf{Auslösendes Ereignis:} Anfrage des Nutzers
+			\newline\newline \textbf{Beschreibung:}
+			\begin{enumerate}[nosep]
+				\item Zur Seite der Veranstaltung navigieren
+				\item “Veranstaltung nicht mehr abonnieren” klicken
+				\item  Aktion bestätigen\\
+			\end{enumerate}
+						
+				
+			%Veranstaltung bearbeiten
 			\item[\textbf{FA140}]\textbf{Veranstaltung bearbeiten}
+			\newline \textbf{Ziel:} Informationen über die Veranstaltung ändern
+			\newline \textbf{Kategorie:} primär
+			\newline \textbf{Vorbedingungen:} Nutzer muss Ersteller der Veranstaltung sein
+			\newline \textbf{Nachbedingungen (Erfolg):} 
+			\begin{enumerate}[nosep]
+				\item Veranstaltung wird geändert 
+			\end{enumerate}
+			\textbf{Nachbedingungen (Fehlschlag):}
+			\newline \textbf{Akteure:} Nutzer
+			\newline \textbf{Auslösendes Ereignis:} Anfrage des Nutzers
+			\newline\newline \textbf{Beschreibung:}
+			\begin{enumerate}[nosep]
+				\item Zur Seite der Veranstaltung navigieren
+				\item “Veranstaltung bearbeiten” klicken
+				\item  Formular wie beim Erstellen wird angezeigt und die Daten können geändert werden
+				\item Bearbeitung bestätigen
+				\item Nutzer wird zur Seite der Veranstaltung weitergeleitet\\
+			\end{enumerate}
+				
+								
+			%Beitrag in Veranstaltung veröffentlichen
+			\item[\textbf{FA110}]\textbf{Beitrag in Veranstaltung veröffentlichen}
+				\newline \textbf{Ziel:} Mitteilen von Informationen/Meinungen in einer Veranstaltung
+				\newline \textbf{Kategorie:} primär
+				\newline \textbf{Vorbedingungen:} Veranstaltung ist vorhanden, Veranstaltung ist abonniert vom Nutzer
+				\newline \textbf{Nachbedingungen (Erfolg):} 
+				\begin{enumerate}[nosep]
+					\item Beitrag wird in der Veranstaltung veröffentlicht und auf dem Feed der Veranstaltung angezeigt
+					\item Beitrag wird auf dem Feed der Nutzer angezeigt, die der Veranstaltung folgen
+				\end{enumerate}
+				\textbf{Nachbedingungen (Fehlschlag):}
+				\newline \textbf{Akteure:} Nutzer
+				\newline \textbf{Auslösendes Ereignis:} Anfrage des Nutzers
+				\newline \textbf{Beschreibung:}
+				\begin{enumerate}[nosep]
+					\item Auf die Seite der Veranstaltung navigieren
+					\item Auf den Button “Beitrag erstellen” klicken
+					\item Beitrag erstellen
+					\item ”Beitrag veröffentlichen” klicken\\
+				\end{enumerate}
+			
+			%Beitrag in Veranstaltung löschen
+			\item[\textbf{FA120}]\textbf{Beitrag in Veranstaltung löschen}	
+				\newline \textbf{Ziel:} Beitrag aus dem System löschen
+				\newline \textbf{Kategorie:} primär
+				\newline \textbf{Vorbedingungen:} Nutzer hat den Beitrag verfasst oder Nutzer ist Ersteller der Veranstaltung
+				\newline \textbf{Nachbedingungen (Erfolg):} 
+				\begin{enumerate}[nosep]
+					\item Beitrag wird aus dem System gelöscht
+					\item Beitrag wird nicht mehr angezeigt 
+				\end{enumerate}
+				\textbf{Nachbedingungen (Fehlschlag):}
+				\newline \textbf{Akteure:} Ersteller der Veranstaltung oder des Beitrags
+				\newline \textbf{Auslösendes Ereignis:} Anfrage des Nutzers
+				\newline \textbf{Beschreibung:}
+				\begin{enumerate}[nosep]
+					\item Auf die Seite der Veranstaltung navigieren
+					\item Zu dem zu löschenden Beitrag navigieren
+					\item Aktion bestätigen
+					\item Anzeigen einer Bestätigungsnachricht
+					\item Beitrag verschwindet aus dem Feed der Veranstaltung\\
+				\end{enumerate}
+			
+			%Beitrag in Veranstaltung bearbeiten
+			\item[\textbf{FA120}]\textbf{Beitrag in Veranstaltung bearbeiten}	
+			\newline \textbf{Ziel:} Ein veröffentlichter Beitrag in einer Veranstaltung bearbeiten
+			\newline \textbf{Kategorie:} primär
+			\newline \textbf{Vorbedingungen:} Veranstaltung und Beitrag sind vorhanden, Nutzer muss den Beitrag verfasst haben
+			\newline \textbf{Nachbedingungen (Erfolg):} 
+			\begin{enumerate}[nosep]
+				\item Beitrag wird geändert 
+			\end{enumerate}
+			\textbf{Nachbedingungen (Fehlschlag):}
+			\newline \textbf{Akteure:} Ersteller des Beitrags
+			\newline \textbf{Auslösendes Ereignis:} Anfrage des Nutzers
+			\newline \textbf{Beschreibung:}
+			\begin{enumerate}[nosep]
+				\item Auf die Seite der Veranstaltung navigieren
+				\item Zu dem Beitrag navigieren der geändert werden soll
+				\item Auf "Beitrag bearbeiten" klicken
+				\item Beitrag bearbeiten
+				\item "Änderungen speichern" klicken
+				\item Geänderter Beitrag erscheint im Feed der Veranstaltung\\
+			\end{enumerate}
+						
+
+
+							
 		\end{itemize}
 		
 		\subsection{Beiträge}
 		\begin{itemize}[nosep]
+			%Beitrag veröffentlichen
 			\item[\textbf{FA150}]\textbf{Beitrag veröffentlichen}
+			
+			%Beitrag löschen
 			\item[\textbf{FA160}]\textbf{Beitrag löschen}
+			
+			%Beitrag bearbeiten
 			\item[\textbf{FA170}]\textbf{Beitrag bearbeiten}
+			
+			%Beitrag mit "Gefällt mir" markieren
 			\item[\textbf{FA180}]\textbf{Beitrag mit "Gefällt mir" markieren}
+						\newline \textbf{Ziel:} Zeigen das Beitrag dem Nutzer gefällt
+						\newline \textbf{Kategorie:} Primär
+						\newline \textbf{Vorbedingungen:} VNutzer muss angemeldet sein, Beitrag muss vorhanden sein
+						\newline \textbf{Nachbedingungen (Erfolg):} 
+						\begin{enumerate}[nosep]
+							\item Anzahl der ‘Gefällt mir’ Angaben des Beitrags wird um eins erhöht
+							\item “Gefällt mir” Button wird zu “Gefällt mir nicht mehr”
+						\end{enumerate}
+						\textbf{Nachbedingungen (Fehlschlag):}
+						\newline \textbf{Akteure:} Nutzer
+						\newline \textbf{Auslösendes Ereignis:} Anfrage des Nutzers
+						\newline \textbf{Beschreibung:}
+						\begin{enumerate}[nosep]
+							\item Zu dem Beitrag navigieren
+							\item Auf den Button “Gefällt Mir” klicken\\
+						\end{enumerate}
+					
+					
+						\item[\textbf{FA180}]\textbf{Beitrag "Gefällt mir nicht mehr"}
+						\newline \textbf{Ziel:} Zeigen das Beitrag dem Nutzer nicht mehr gefällt
+						\newline \textbf{Kategorie:} primär
+						\newline \textbf{Vorbedingungen:} Beitrag muss vorhanden sein und von dem Nutzer mit "Gefällt mir" markiert sein
+						\newline \textbf{Nachbedingungen (Erfolg):} 
+						\begin{enumerate}[nosep]
+							\item “Gefällt mir nicht mehr” Button wird zu “Gefällt mir”
+							\item Anzahl der ‘Gefällt mir’ Angaben des Beitrags wird um eins  verringert 
+						\end{enumerate}
+						\textbf{Nachbedingungen (Fehlschlag):}
+						\newline \textbf{Akteure:} Nutzer
+						\newline \textbf{Auslösendes Ereignis:} Anfrage des Nutzers
+						\newline \textbf{Beschreibung:}
+						\begin{enumerate}[nosep]
+							\item Zu dem Beitrag navigieren
+							\item Auf den Button “Gefällt mir nicht mehr” klicken\\
+						\end{enumerate}
+						
+				
+			%Beiträge kommentieren
 			\item[\textbf{FA190}]\textbf{Beiträge kommentieren}
+			
 		\end{itemize}
 		
 		\subsection{Konto}
