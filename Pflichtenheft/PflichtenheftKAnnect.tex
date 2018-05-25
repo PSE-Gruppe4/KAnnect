@@ -620,28 +620,196 @@
 				
 			%Beiträge kommentieren
 			\item[\textbf{FA190}]\textbf{Beiträge kommentieren}
-			
+				\newline \textbf{Ziel:} Meinungen/Informationen/Reaktion zu einem Beitrag äußern
+				\newline \textbf{Kategorie:} Primär
+				\newline \textbf{Vorbedingungen:} Nutzer muss eingeloggt sein, Beitrag muss vorhanden sein
+				\newline \textbf{Nachbedingungen (Erfolg):} 
+				\begin{enumerate}[nosep]
+					\item Kommentar wird gespeichert
+					\item Kommentar wird unter dem Beitrag angezeigt 
+				\end{enumerate}
+				\textbf{Nachbedingungen (Fehlschlag):}
+				\newline \textbf{Akteure:} Nutzer
+				\newline \textbf{Auslösendes Ereignis:} Anfrage des Nutzers
+				\newline \textbf{Beschreibung:}
+				\begin{enumerate}[nosep]
+					\item Zu dem Beitrag navigieren
+					\item Auf den ‘Kommentieren’ Button klicken
+					\item Kommentar schreiben
+					\item “Kommentar veröffentlichen” klicken\\
+				\end{enumerate}
+									
 		\end{itemize}
 		
 		\subsection{Konto}
 		\begin{itemize}[nosep]
+			
+			%Konto erstellen
 			\item[\textbf{FA200}]\textbf{Konto erstellen}
+							\newline \textbf{Ziel:} KAnnect zu benutzen
+							\newline \textbf{Kategorie:} Primär
+							\newline \textbf{Vorbedingungen:} Nutzer muss ein Google Konto besitzen und es darf nicht schon ein Konto registriert sein über diesem Google Konto
+							\newline \textbf{Nachbedingungen (Erfolg):} 
+							\begin{enumerate}[nosep]
+								\item Konto wird erstellt und gespeichert
+								\item Nutzer wird zu seinem Feed weitergeleitet 
+							\end{enumerate}
+							\textbf{Nachbedingungen (Fehlschlag):} Eine Fehlernachricht wird angezeigt
+							\newline \textbf{Akteure:} Nutzer
+							\newline \textbf{Auslösendes Ereignis:} Anfrage des Nutzers
+							\newline \textbf{Beschreibung:}
+							\begin{enumerate}[nosep]
+								\item App herunterladen
+								\item App öffnen
+								\item Auf den “Registrieren” Button klicken
+								\item Mit Google-Konto anmelden und bestätigen\\
+							\end{enumerate}
+		
+			% Konto löschen			
 			\item[\textbf{FA210}]\textbf{Konto löschen}
+							\newline \textbf{Ziel:} App nicht mehr benutzen, alle Daten über Nutzer zu löschen
+							\newline \textbf{Kategorie:} Primär
+							\newline \textbf{Vorbedingungen:} Nutzer muss ein Konto haben und angemeldet sein
+							\newline \textbf{Nachbedingungen (Erfolg):} 
+							\begin{enumerate}[nosep]
+								\item Nutzerdaten werden von der App gelöscht
+								\item Nutzer wird abgemeldet 
+							\end{enumerate}
+							\textbf{Nachbedingungen (Fehlschlag):}
+							\newline \textbf{Akteure:} Nutzer
+							\newline \textbf{Auslösendes Ereignis:} Anfrage des Nutzers
+							\newline \textbf{Beschreibung:}
+							\begin{enumerate}[nosep]
+								\item Auf das eigene Profil navigieren
+								\item Auf “Einstellungen” klicken
+								\item Auf “Konto löschen” klicken
+								\item Aktion bestätigen\\
+							\end{enumerate}
+			
+			% anmelden				
 			\item[\textbf{FA220}]\textbf{anmelden}
+							\newline \textbf{Ziel:} App benutzen
+							\newline \textbf{Kategorie:} Primär
+							\newline \textbf{Vorbedingungen:} Nutzer muss registriert sein
+							\newline \textbf{Nachbedingungen (Erfolg):} 
+							\begin{enumerate}[nosep]
+								\item Nutzer wird zu seinem Feed weitergeleitet 
+							\end{enumerate}
+							\textbf{Nachbedingungen (Fehlschlag):}
+							\newline \textbf{Akteure:} Nutzer
+							\newline \textbf{Auslösendes Ereignis:} Anfrage des Nutzers
+							\newline \textbf{Beschreibung:}
+							\begin{enumerate}[nosep]
+								\item App öffnen
+								\item Auf den Button “Anmelden” klicken
+								\item Mit Google-Konto anmelden\\
+							\end{enumerate}
+						
+			% abmelden	
 			\item[\textbf{FA230}]\textbf{abmelden}
+							\newline \textbf{Ziel:} App nicht mehr benutzen oder sich mit einem anderen Kono anmelden
+							\newline \textbf{Kategorie:} Primär
+							\newline \textbf{Vorbedingungen:} Nutzer ist angemeldet
+							\newline \textbf{Nachbedingungen (Erfolg):} 
+							\begin{enumerate}[nosep]
+								\item Nutzer wird abgemeldet
+								\item Nutzer wird zur Anmeldeseite weitergeleitet 
+							\end{enumerate}
+							\textbf{Nachbedingungen (Fehlschlag):}
+							\newline \textbf{Akteure:} Nutzer
+							\newline \textbf{Auslösendes Ereignis:} Anfrage des Nutzers
+							\newline \textbf{Beschreibung:}
+							\begin{enumerate}[nosep]
+								\item Zu dem “Abmelden” Button navigieren\\
+							\end{enumerate}
+							
 		\end{itemize}
 		
 		\subsection{Nachrichten}
 		\begin{itemize}[nosep]
 			\item[\textbf{FA240}]\textbf{Nachrichten schicken}
+				\newline \textbf{Ziel:} Mit anderen Nutzern zu kommunizieren
+				\newline \textbf{Kategorie:} Primär
+				\newline \textbf{Vorbedingungen:} Nutzer ist angemeldet und Empfänger muss ein Konto haben
+				\newline \textbf{Nachbedingungen (Erfolg):} 
+				\begin{enumerate}[nosep]
+					\item Nachricht wird versendet
+					\item Nachricht wird zu dem Ordner “Gesendete Nachrichten” hinzugefügt
+				\end{enumerate}
+				\textbf{Nachbedingungen (Fehlschlag):}
+				\newline \textbf{Akteure:} Nutzer
+				\newline \textbf{Auslösendes Ereignis:} Anfrage des Nutzers
+				\newline \textbf{Beschreibung:}
+				\begin{enumerate}[nosep]
+					\item Möglichkeit
+						\begin{enumerate}[nosep]
+							\item Zum Profil des Empfängers navigieren
+							\item “Nachricht schicken” klicken
+							\item Nachricht verfassen
+							\item Auf den Button “Schicken” klicken
+						\end{enumerate}
+					\item Möglichkeit
+						\begin{enumerate}[nosep]
+							\item Zum Briefkasten navigieren
+							\item “Nachricht schicken” klicken
+							\item Empfänger auswählen
+							\item Nachricht schreiben
+							\item Auf den Button “Schicken” klicken
+						\end{enumerate}
+				\end{enumerate}
+										
 			\item[\textbf{FA250}]\textbf{ Nachrichten empfangen}
+				\newline \textbf{Ziel:} Überprüfen ob neue Nachrichten im Briefkasten sind
+				\newline \textbf{Kategorie:} Primär
+				\newline \textbf{Vorbedingungen:} Nutzer ist angemeldet
+				\newline \textbf{Nachbedingungen (Erfolg):} 
+				\begin{enumerate}[nosep]
+					\item neue Nachrichten werden im Briefkasten angezeigt
+					\item Neue Nachrichten können angeklickt und gelesen werden 
+				\end{enumerate}
+				\textbf{Nachbedingungen (Fehlschlag):}
+				\newline \textbf{Akteure:} Nutzer
+				\newline \textbf{Auslösendes Ereignis:} Anfrage des Nutzers
+				\newline \textbf{Beschreibung:}
+				\begin{enumerate}[nosep]
+					\item Zum “Briefkasten” navigieren
+					\item Auf die neue Nachricht klicken
+					\item Nachricht wird geöffnet\\
+				\end{enumerate}
+										
 		\end{itemize}
 		
 		\subsection{Feed}
 		\begin{itemize}[nosep]
-			\item[\textbf{FA260}]\textbf{Feed aktualisieren}
+			
+			% Persönlicher Feed
+			\item[\textbf{FA260}]\textbf{persönlicher Feed}
+							\newline \textbf{Ziel:} Beiträge von abonnierten Veranstaltungen/Freunde und beigetretenen Gruppen zu sehen
+							\newline \textbf{Kategorie:} Primär
+							\newline \textbf{Vorbedingungen:} Nutzer ist angemeldet
+							\newline \textbf{Nachbedingungen (Erfolg):} 
+							\begin{enumerate}[nosep]
+								\item Beiträge werden im Feed angezeigt 
+							\end{enumerate}
+							\textbf{Nachbedingungen (Fehlschlag):}
+							\newline \textbf{Akteure:} Nutzer
+							\newline \textbf{Auslösendes Ereignis:} Anfrage des Nutzers
+							\newline \textbf{Beschreibung:}
+							\begin{enumerate}[nosep]
+								\item Zum Feed navigieren\\
+							\end{enumerate}
 		\end{itemize}
 	\section{Produktdaten}
+	\begin{itemize}
+		\item[\textbf{PD10}] \textbf{Nutzer}
+			
+		\item[\textbf{PD20}] \textbf{Kategorie}
+		\item[\textbf{PD21}] \textbf{Unterkategorie}
+		\item[\textbf{PD30}] \textbf{Gruppe}
+		\item[\textbf{PD40}] \textbf{Veranstaltung}
+		\item[\textbf{PD50}] \textbf{Beitrag}
+		\item[\textbf{PD60}] \textbf{Nachricht}
+	\end{itemize}
 	
 	\section{Nichfunktionale Anforderungen}
 	
