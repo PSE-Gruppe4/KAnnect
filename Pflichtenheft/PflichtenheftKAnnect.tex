@@ -995,6 +995,106 @@
 	\newpage
 	\section{Globale Testfälle}
 	
+	\subsection{Nachrichten}
+		
+		\begin{itemize}
+			\item[T] App starten
+\begin{enumerate}
+	\item
+	\begin{enumerate}[nosep]	
+	\item Stand: Benutzeroberfläche des Mobiltelefons
+	\item Aktion: Aktion Benutzer drückt auf das  Symbol der „KAnnect“ App
+	\item Reaktion: Reaktion  Seite der Anmeldung wird geöffnet
+\end{enumerate} 
+\end{enumerate}
+
+
+
+\item[T] Menü öffnen
+Nutzer muss angemeldet sein und darf sich nicht auf der Seite eines Formulars befinden. Auf allen anderen Seiten/Ansichten muss das Menü geöffnet werden können.
+\end{enumerate}
+
+
+
+\item[T] Durch die App navigieren
+\begin{enumerate}
+	\item
+	\begin{enumerate}[nosep]	
+	\item Stand: Nutzer muss angemeldet sein und sich nicht auf der Seite des Formulars befinden
+	\item Aktion: Benutzer  drückt auf das Menüsymbol
+	\item Reaktion:  Das Menü wird geöffnet
+\end{enumerate} 
+\item
+	\begin{enumerate}[nosep]	
+	\item Stand: Menü ist geöffnet
+	\item Aktion: Benutzer drückt auf einen der Button im Menü(Feed, Profil, Gruppe 1,…)
+	\item Reaktion: Nutzer wird zu der dementsprechenden Seite geleitet
+\end{enumerate}
+\end{enumerate}
+
+
+
+\item[T] Veranstaltungen, Personen und Gruppen suchen
+\begin{enumerate}
+	\item
+	\begin{enumerate}[nosep]	
+	\item Stand: Nutzer muss angemeldet sein und sich auf seinem Feed befinden
+	\item Aktion: Benutzer  drückt auf das Suchfeld und gibt ein Suchbegriff ein
+	\item Reaktion: Es wird eine Liste mit allen Gruppen, Personen und Veranstaltung mit dem angegebenen Suchbegriff angezeigt. Wenn es keine solche Gruppen etc. gibt, wird eine leere Seite mit entsprechender Fehlernachricht angezeigt.
+\end{enumerate} 
+\end{enumerate}
+
+
+
+
+\item[T]  Hochladen von einem Bild für Veranstaltungen/Gruppen
+\begin{enumerate}
+	\item
+	\begin{enumerate}[nosep]	
+	\item Stand: Formular zum Erstellen einer Veranstaltung oder Gruppe 
+	\item Aktion: Nutzer drückt auf „Foto hochladen“
+	\item Reaktion:  Es  wird ein Fenster zum Hochladen des Fotos geöffnet
+\end{enumerate} 
+\item
+	\begin{enumerate}[nosep]	
+	\item Stand: Fenster zum Hochladen des Fotos geöffnet
+	\item Aktion: Benutzer sucht das gewünschte Foto und klickt auf „öffnen“
+	\item Reaktion: Foto wird hochgeladen und als Profilbild der Veranstaltung/Gruppe gesetzt
+\end{enumerate}
+\end{enumerate}
+
+\item[T] Anzeigen eines Dialogfensters zum löschen von Veranstaltungen/Gruppen/des Kontos
+\begin{enumerate}
+	\item
+	\begin{enumerate}[nosep]	
+	\item Stand:  Seite der Veranstaltung der Gruppe des eigenen Profils  geöffnet
+	\item Aktion: Benutzer drückt auf „Löschen“
+	\item Reaktion: Es  wird ein Dialogfenster mit einem Button zur Bestätigung des Löschens  angezeigt
+\end{enumerate} 
+\end{enumerate}
+
+\item[T] Anpassung der Größe von Bildern beim hochladen
+\begin{enumerate}
+	\item
+	\begin{enumerate}[nosep]	
+	\item Stand:  Profil des Nutzers
+	\item Aktion: Benutzer  drückt auf „Foto hochladen“, Foto auswählen und bestätigen
+	\item Reaktion: Bild in angepasster Größe hochgeladen
+\end{enumerate} 
+\end{enumerate}
+
+\item[T] Anpassung der Größe der Videos beim Ansehen
+\begin{enumerate}
+	\item
+	\begin{enumerate}[nosep]	
+	\item Stand:  Beitrag mit Video
+	\item Aktion: Benutzer  drückt auf das Video
+	\item Reaktion: Größe des Videos an das Gerät anpassen(full size)
+\end{enumerate} 
+\end{enumerate}
+	
+		\end{itemize}
+		
 	\subsection{Freunde}
 		
 		\begin{itemize}
@@ -1197,14 +1297,80 @@
 	\subsection{Beiträge}
 	
 		\begin{itemize}
-			\item[T40] 
+			\item[T] Beitrag im Feed anzeigen, auf welchem der Nutzer markiert wurde
+\begin{enumerate}
+	\item
+	\begin{enumerate}[nosep]	
+	\item Stand:  Beitrag in einem Feed
+	\item Aktion: Benutzer markiert im Beitrag einen Nutzer
+	\item Reaktion: Beitrag erscheint im Feed der markierten Person
+\end{enumerate} 
+\end{enumerate} 
 		\end{itemize}
 
 
 	\subsection{Konto}
 		
 		\begin{itemize}
-			\item[T50] 
+			\item[T] Registrierung mittels Google-Konto
+\begin{enumerate}
+	\item
+	\begin{enumerate}[nosep]	
+	\item Stand: Seite der Registrierung
+	\item Aktion:  Auf “Mit Google Konto registrieren” klicken
+	\item Reaktion: Es  wird zur Registrierung mittels Google Account weitergeleitet. Registrierung wird abgewickelt. Nutzer wird dann zu seinem Feed weitergeleitet
+\end{enumerate} 
+\end{enumerate}
+
+
+
+\item[T] Konto löschen
+\begin{enumerate}
+	\item
+	\begin{enumerate}[nosep]	
+	\item Stand: Seite des eigenen Profils
+	\item Aktion: Benutzer  drückt auf „Konto löschen“
+	\item Reaktion: Dialogfenster wird angezeigt mit “Aktion bestätigen”
+\end{enumerate} 
+\item
+	\begin{enumerate}[nosep]	
+	\item Stand: Dialogfenster mit “Aktion bestätigen”
+	\item Aktion: Benutzer klickt auf „Bestätigen“
+	\item Reaktion: Konto wird gelöscht. Nutzer wird zur Seite der Anmeldung geleitet
+\end{enumerate}
+\end{enumerate}
+
+
+
+\item[T] Anmeldung
+\begin{enumerate}
+	\item
+	\begin{enumerate}[nosep]	
+	\item Stand: Seite Anmeldung
+	\item Aktion: Nutzer tippt seine Anmeldedaten ein und klickt auf “Anmelden”
+	\item Reaktion:  Nutzer wird zu seinem Feed geleitet
+\end{enumerate} 
+\item
+	\begin{enumerate}[nosep]	
+	\item Stand: Seite Anmeldung
+	\item Aktion: Nutzer tippt falsche Anmeldedaten ein und klickt auf “Anmelden”
+	\item Reaktion: Fehlermeldung und Nutzer bleibt auf der Anmelde Seite
+\end{enumerate}
+\end{enumerate}
+
+
+
+\item[T] Abmeldung
+\begin{enumerate}
+	\item
+	\begin{enumerate}[nosep]	
+	\item Stand: Seite des eigenen Profils
+	\item Aktion: Nutzer klickt auf “Abmelden”
+	\item Reaktion:  Nutzer wird zur Seite der Anmeldung geleitet
+\end{enumerate} 
+\end{enumerate}
+
+ 
 		\end{itemize}
 	
 	
@@ -1216,7 +1382,31 @@
 		\end{itemize}
 	\subsection{Feed}
 		\begin{itemize}
-			\item[T70]
+			\item[T] Anzeigen eines veröffentlichten Beitrags im Feed aller Abonnenten
+\begin{enumerate}
+	\item
+	\begin{enumerate}[nosep]	
+	\item Stand: Feed eines Abonnenten
+	\item Aktion: Anderen Nutzer den man abonniert hat veröffentlicht ein Beitrag
+	\item Reaktion: Beitrag wird im Feed des Abonnenten angezeigt
+\end{enumerate} 
+\end{enumerate}
+
+\item[T]  Chronologische Reihenfolge der Beiträge im Feed
+\begin{enumerate}
+	\item
+	\begin{enumerate}[nosep]	
+	\item Stand: App geöffnet
+	\item Aktion: Benutzer  navigiert zu seinem Feed oder aktualisiert die App
+	\item Reaktion:  Alle Beiträge werden  in ein chronologischer Reihenfolge angezeigt
+\end{enumerate} 
+\item
+	\begin{enumerate}[nosep]	
+	\item Stand: Feed des Nutzers
+	\item Aktion: Benutzer  drückt auf „Filter“ und wählt  Kategorien aus
+	\item Reaktion: Es  wird nur Beiträge von der(n) ausgewählte(n) Filter(n )angezeigt
+\end{enumerate}
+\end{enumerate}
 		\end{itemize}
 
 	
