@@ -759,6 +759,25 @@
 							\begin{enumerate}[nosep]
 								\item Zu dem “Abmelden” Button navigieren\\
 							\end{enumerate}
+			
+			\item[\textbf{FA504}]\textbf{Bearbeitungsrechte weitergeben}
+							\newline \textbf{Ziel:} Bearbeitungsrechte des Erstellers an anderen Nutzer weitergeben
+							\newline \textbf{Kategorie:} Sekundär
+							\newline \textbf{Vorbedingungen:} Nutzer ist der Ersteller der Gruppe/Veranstaltung
+							\newline \textbf{Nachbedingungen (Erfolg):} Der andere Nutzer hat jetzt die Rechte vom Ersteller
+							\begin{enumerate}[nosep]
+								\item Nutzer wird abgemeldet
+								\item Nutzer wird zur Anmeldeseite weitergeleitet 
+							\end{enumerate}
+							\textbf{Nachbedingungen (Fehlschlag):}
+							\newline \textbf{Akteure:} Nutzer
+							\newline \textbf{Auslösendes Ereignis:} Anfrage des Nutzers
+							\newline \textbf{Beschreibung:}
+							\begin{enumerate}[nosep]
+								\item Auf der Seite der Gruppe/Veranstaltung navigieren\\
+								\item Auf “Verantwortlichen ändern” klicken
+								\item Bestätigen
+							\end{enumerate}
 							
 		\end{itemize}
 		
