@@ -3,10 +3,10 @@
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 \usepackage[ngerman]{babel} %ngermen = new german
-\usepackage{hyperref}
 \usepackage{glossaries}
 \makenoidxglossaries
-
+	
+	\newglossaryentry{Nutzer}{name={Nutzer},description={}}
 	\newglossaryentry{Feed}{name={Feed},description={Eine Seite, auf der ein Nutzer aktuelle Beiträge sehen kann.}}
 	\newglossaryentry{App}{name={App},description={App ist eine Abkürzung für das englische Wort Application. Dies Bedeutet Anwendung. Eine App ist also eine Anwendung/Programm, welches eine gewisse Funktion ausführt.}}
 	\newglossaryentry{AdminRechte}{name={Admin Rechte},description={Der Ersteller einer Veranstaltung oder Gruppe hat diese Rechte. Damit sind die Rechte gemeint, Beiträge aus der Gruppe/Veranstaltung zu löschen oder zu bearbeiten, genauso wie die Rechte die Gruppe/Veranstaltung zu bearbeiten oder zu löschen.}}
@@ -19,9 +19,7 @@
 	\newglossaryentry{Kategorie}{name={Kategorie},description={}}
 	\newglossaryentry{Unterkategorie}{name={Unterkategorie},description={}}
 
-\hypersetup{pdftitle= {PSE: Pflichtenheft,
-		bookmarks=true,
-}}
+
 
 \usepackage{csquotes}
 \usepackage{graphicx}
@@ -42,7 +40,10 @@
 	\date{Sommersemester 2018}
 \graphicspath{/home/florian/Documents}
 \usepackage{cleveref}
-
+\usepackage{hyperref}
+\hypersetup{pdftitle= {PSE: Pflichtenheft,
+		bookmarks=true,
+	}}
 
 
 	
@@ -62,7 +63,7 @@
 	\subsection{Musskriterien}
 	
 	\begin{itemize}
-		\item Verwalten von Veranstaltungen
+		\item Verwalten von Veranstaltungen (Siehe \hyperref[sec:FAVeranstaltungen]{4.3})
 			\begin{itemize} 
 				
 				\item Erstellen, Löschen, Ändern, Suchen, Veranstaltungen abonnieren
@@ -70,96 +71,51 @@
 				\item Ersteller hat Admin Rechte
 			\end{itemize}
 			
-			\item Verwalten von Gruppen
+			\item Verwalten von Gruppen (Siehe \hyperref[sec:FAGruppen]{4.2})
 				\begin{itemize}
 					\item Erstellen, löschen, Ändern, Suchen, Speichern, Gruppen abonnieren
 					\item Ersteller hat Admin Rechte
 				\end{itemize}
-			\item Verwalten von Kontakten
+			\item Verwalten von Kontakten (Siehe \hyperref[sec:FAFreunde]{4.1} und \hyperref[sec:FAKonto]{4.5}) 
 				\begin{itemize}
 					\item Erstellen, löschen, Ändern, Suchen, Speichern, Kontakte abonnieren
 					\item Erstellen des Benutzerkontos über Google Play
 				\end{itemize}
-			\item In-App Kommunikation
+			\item In-App Kommunikation (Siehe \hyperref[sec:FABeiträge]{4.4} und \hyperref[sec:FANachrichten]{4.6}) 
 			\begin{itemize}
 				\item versenden, erhalten von Nachrichten
 				\item Veröffentlichung von Beiträgen von Nutzern
 			\end{itemize}
-			\item Beiträge im \gls{Feed} darstellen
+			\item Beiträge im \gls{Feed} darstellen (Siehe \hyperref[sec:FAFeed]{4.7}) 
 				\begin{itemize}
 					\item von gefolgten Kontakten/Gruppen/Veranstaltungen
 					\item anwenden von Filterkriterien
 					\item chronologische Reihenfolge nach Veröffentlichungsdatum
 				\end{itemize}
-			\item Kommentieren von Beiträgen
+			\item Kommentieren von Beiträgen (Siehe \hyperref[sec:FABeiträge]{4.4}) 
 				\begin{itemize}
 					\item chronologisch Speichern, löschen, Ändern
 				\end{itemize}	
 	\end{itemize}
 	
 	\subsection{Wunschkriterien}
-		\begin{itemize}[nosep]
-			\item Sofortige Nachrichtenübermittlung
+		\begin{itemize}[nosep] 
+			\item Sofortige Nachrichtenübermittlung (Siehe \hyperref[sec:FA602]{/FA602/} und \hyperref[sec:FA603]{/FA603/})
 			\begin{itemize}
 				\item erstellen und löschen von Konversationen und Gruppenkonversationen
-				\item speichern der Nachrichten
-				\item synchronisation aller Geräte
 			\end{itemize}
 			
-			\item Karte von Karlsruhe
+			\item Karte von Karlsruhe (Siehe \hyperref[sec:FA??]{/FA??/})
 				\begin{itemize}
 					\item zeigt alle Veranstaltungen des heutigen Tages und deren Ort
 				\end{itemize}
-			\item Verwalten von Geschäftskonten
+			\item hochladen von Fotos und Videos (Siehe \hyperref[sec:FA409]{/FA409/})
 				\begin{itemize}
-					\item erstellen, löschen, Ändern, Suchen, Speichern
+					\item für Nutzer
 				\end{itemize}
-			\item anbieten von Werbeflächen
-				\begin{itemize}
-					\item für Geschäftskonten
-				\end{itemize}
-			\item Sicherheit
-				\begin{itemize}
-					\item Kundendaten die über das Internet vermittelt \item werden sollen verschlüsselt werden
-				\end{itemize}
-			\item hochladen von Fotos und Videos
-				\begin{itemize}
-					\item für Nutzer und Geschäftskonten
-				\end{itemize}
-			\item Admin Rechte sollen weitergegeben werden können an andere Nutzer
-			\item Chat mit zufälligen Nutzern
-				\begin{itemize}
-					\item Instant Messaging, Videochat und Sprach Chat
-					\item mit anderen Nutzern die auch online sind, die diese Dienst auch nutzen wollen
-				\end{itemize}
-			\item Markieren  von Benutzern auf Beiträgen, in Gruppen und Veranstaltungen
-			\item Chat mit zufälligen Nutzern
-				\begin{itemize}
-					\item Instant Messaging, Videochat und Sprach Chat
-					\item mit anderen Nutzern die auch online sind, die diese Dienst auch nutzen wollen
-				\end{itemize}
-			\item Plattformunabhängigkeit
-				\begin{itemize}
-					\item das Produkt soll auf allen Plattformen erhältlich sein
-					\item zB für iOS und Windows
-				\end{itemize}
-			\item Anmeldung mit anderen Services möglich
-				\begin{itemize}
-					\item zB Apple Account, Facebook Account, Twitter Account
-				\end{itemize}
-			\item Ändern der Sprache der App
-				\begin{itemize}
-					\item nicht nur Deutsch, sondern auch auf Englisch
-				\end{itemize}
-			\item Jobbörse für Unternehmen die Werkstudenten suchen
-				\begin{itemize}
-					\item erstellen, löschen, ändern, Suchen, Speichern von Stellenangeboten
-				\end{itemize}
-			\item private Gruppen
-				\begin{itemize}
-					\item erstellen, löschen, ändern und Speichern von privaten Gruppen
-					\item nur eingeladene Nutzern können Gruppen beitreten	
-				\end{itemize}
+			\item Admin Rechte sollen weitergegeben werden können an andere Nutzer 
+			(Siehe \hyperref[sec:FA??]{/FA??/})
+			\item Markieren von Nutzern auf Beiträgen (Siehe \hyperref[sec:FA410]{/FA410/})
 		\end{itemize}
 		
 	\subsection{Abgrenzungskriterien}
@@ -198,10 +154,10 @@
 	
 	\newpage
 	\section{Funktionale Anforderungen}
-		\subsection{Freunde}
+		\subsection{Freunde} \label{sec:FAFreunde}
 		\begin{itemize}[nosep]
 			% Freund suchen
-			\item[\textbf{FA10}]\textbf{Freund suchen}
+			\item[\textbf{FA100}]\textbf{Freund suchen}
 			\newline\newline \textbf{Ziel:} Suche nach einem Freund mithilfe seines Namens
 			\newline \textbf{Kategorie:} primär
 			\newline \textbf{Vorbedingungen:} Nutzer muss ein Konto besitzen
@@ -224,7 +180,7 @@
 				\end{enumerate}
 			
 			% Freund abonnieren
-			\item[\textbf{\large FA20}]\textbf{\large Freund abonnieren}
+			\item[\textbf{\large FA101}]\textbf{\large Freund abonnieren}
 				\newline\newline \textbf{Ziel:} Beiträge des Freundes angezeigt zu bekommen
 				\newline \textbf{Kategorie:} primär
 				\newline \textbf{Vorbedingungen:} Nutzer und Freund müssen ein Konto besitzen
@@ -243,7 +199,7 @@
 				\end{enumerate}
 			
 			% Freund nicht mehr abonnieren
-			\item[\textbf{\large FA30}]\textbf{\large Freund nicht mehr abonnieren}
+			\item[\textbf{\large FA102}]\textbf{\large Freund nicht mehr abonnieren}
 				\newline \textbf{Ziel:} Freund aus der Liste der Abonnenten löschen, damit seine Beiträge nicht mehr im \gls{Feed} erscheinen
 				\newline \textbf{Kategorie:} primär
 				\newline \textbf{Vorbedingungen:} Freund muss schon abonniert sein
@@ -262,10 +218,10 @@
 				\end{enumerate}
 		\end{itemize}
 		
-		\subsection{Gruppe}
+		\subsection{Gruppe} \label{sec:FAGruppe}
 		\begin{itemize}[nosep]
 			%Gruppe erstellen
-			\item[\textbf{FA40}]\textbf{Gruppe erstellen}
+			\item[\textbf{FA200}]\textbf{Gruppe erstellen}
 			\newline \textbf{Ziel:} eine Gruppe erstellen
 			\newline \textbf{Kategorie:} primär
 			\newline \textbf{Vorbedingungen:} Nutzer muss angemeldet sein
@@ -288,7 +244,7 @@
 			\end{enumerate}
 			
 			% Gruppe löschen
-			\item[\textbf{FA50}]\textbf{Gruppe löschen}
+			\item[\textbf{FA201}]\textbf{Gruppe löschen}
 						\newline \textbf{Ziel:} nicht mehr benötigte Gruppen löschen
 						\newline \textbf{Kategorie:} primär
 						\newline \textbf{Vorbedingungen:} Gruppe ist schon vorhanden
@@ -308,7 +264,7 @@
 						\end{enumerate}
 						
 			% Gruppe beitreten
-			\item[\textbf{FA60}]\textbf{Gruppe beitreten}
+			\item[\textbf{FA202}]\textbf{Gruppe beitreten}
 				\newline \textbf{Ziel:} Gruppenbeiträge angezeigt bekommen und neue Gruppenbeiträge veröffentlichen
 				\newline \textbf{Kategorie:} primär
 				\newline \textbf{Vorbedingungen:} Gruppe ist schon vorhanden
@@ -328,7 +284,7 @@
 					\end{enumerate}
 									
 			% Gruppe verlassen
-			\item[\textbf{FA70}]\textbf{Gruppe verlassen}
+			\item[\textbf{FA203}]\textbf{Gruppe verlassen}
 				\newline \textbf{Ziel:} Gruppenbeiträge nicht mehr angezeigt zu bekommen
 				\newline \textbf{Kategorie:} primär
 				\newline \textbf{Vorbedingungen:} Benutzer ist Mitglied der vorhandenen Gruppe
@@ -352,11 +308,11 @@
 						
 		\end{itemize}
 		
-		\subsection{Veranstaltungen}
+		\subsection{Veranstaltungen} \label{sec:FAVeranstaltungen}
 		\begin{itemize}[nosep]
 			
 			%Veranstaltung erstellen
-			\item[\textbf{FA90}]\textbf{Veranstaltung erstellen}
+			\item[\textbf{FA300}]\textbf{Veranstaltung erstellen}
 				\newline \textbf{Ziel:} Bekanntmachung von Veranstaltungen, Werbemöglichkeit für eine Veranstaltung
 				\newline \textbf{Kategorie:} primär
 				\newline \textbf{Vorbedingungen:} Jeder Nutzer kann eine Veranstaltung erstellen
@@ -377,7 +333,7 @@
 				\end{enumerate}
 				
 			%Veranstaltung löschen
-			\item[\textbf{FA100}]\textbf{Veranstaltung löschen}
+			\item[\textbf{FA301}]\textbf{Veranstaltung löschen}
 				\newline \textbf{Ziel:} Veranstaltung aus dem System löschen
 				\newline \textbf{Kategorie:} primär
 				\newline \textbf{Vorbedingungen:} Veranstaltung muss vorhanden sein, Nutzer muss Ersteller sein
@@ -398,7 +354,7 @@
 				\end{enumerate}
 			
 			%Veranstaltung abonnieren
-			\item[\textbf{FA120}]\textbf{Veranstaltung abonnieren}
+			\item[\textbf{FA304}]\textbf{Veranstaltung abonnieren}
 			\newline \textbf{Ziel:} Neuigkeiten und Informationen der Veranstaltung im \gls{Feed} erhalten
 			\newline \textbf{Kategorie:} primär
 			\newline \textbf{Vorbedingungen:} Veranstaltung muss vorhanden sein, Nutzer muss ein Konto haben
@@ -418,7 +374,7 @@
 						
 						
 			%Veranstaltung nicht mehr abonnieren
-			\item[\textbf{FA130}]\textbf{Veranstaltung nicht mehr abonnieren}
+			\item[\textbf{FA305}]\textbf{Veranstaltung nicht mehr abonnieren}
 			\newline \textbf{Ziel:} Veranstaltungs Neuigkeiten und Beiträge nicht mehr im \gls{Feed} angezeigt zu bekommen
 			\newline \textbf{Kategorie:} primär
 			\newline \textbf{Vorbedingungen:} Nutzer muss die Veranstaltung abonniert haben
@@ -439,7 +395,7 @@
 						
 				
 			%Veranstaltung bearbeiten
-			\item[\textbf{FA140}]\textbf{Veranstaltung bearbeiten}
+			\item[\textbf{FA306}]\textbf{Veranstaltung bearbeiten}
 			\newline \textbf{Ziel:} Informationen über die Veranstaltung ändern
 			\newline \textbf{Kategorie:} primär
 			\newline \textbf{Vorbedingungen:} Nutzer muss Ersteller der Veranstaltung sein
@@ -464,7 +420,7 @@
 				
 						
 			% Veranstaltung auf Karte ansehen
-			\item[\textbf{FA120}]\textbf{Veranstaltung auf Karte ansehen}	
+			\item[\textbf{FA307}]\textbf{Veranstaltung auf Karte ansehen}	
 			\newline \textbf{Ziel:} Herausfinden wo Veranstaltung stattfindet
 			\newline \textbf{Kategorie:} Sekundär
 			\newline \textbf{Vorbedingungen:} Veranstaltung ist vorhanden und Adresse wurde angegeben
@@ -485,10 +441,10 @@
 							
 		\end{itemize}
 		
-		\subsection{Beiträge}
+		\subsection{Beiträge} \label{sec:FABeiträge}
 		\begin{itemize}[nosep]
 			%Beitrag veröffentlichen
-			\item[\textbf{FA130}]\textbf{Beitrag veröffentlichen}
+			\item[\textbf{FA400}]\textbf{Beitrag veröffentlichen}
 			\newline \textbf{Ziel:} Mitteilen von Informationen/Meinungen
 			\newline \textbf{Kategorie:} primär
 			\newline \textbf{Vorbedingungen:}
@@ -509,7 +465,7 @@
 			\end{enumerate}
 			
 			%Beitrag Gruppe/Veranstaltung veröffentlichen
-			\item[\textbf{FA135}]\textbf{Beitrag in Gruppe/Veranstaltung veröffentlichen}
+			\item[\textbf{FA401}]\textbf{Beitrag in Gruppe/Veranstaltung veröffentlichen}
 			\newline \textbf{Ziel:} Mitteilen von Informationen/Meinungen in einer Gruppe/Veranstaltung
 			\newline \textbf{Kategorie:} primär
 			\newline \textbf{Vorbedingungen:}
@@ -534,7 +490,7 @@
 			\end{enumerate}
 			
 			%Beitrag  löschen
-			\item[\textbf{FA140}]\textbf{Beitrag löschen}
+			\item[\textbf{FA402}]\textbf{Beitrag löschen}
 			\newline \textbf{Ziel:} Beitrag aus dem System löschen
 			\newline \textbf{Kategorie:} primär
 			\newline \textbf{Vorbedingungen:} Nutzer hat den Beitrag verfasst
@@ -555,7 +511,7 @@
 			\end{enumerate}
 			
 			%Beitrag in Gruppe/Veranstaltung löschen
-			\item[\textbf{FA145}]\textbf{Beitrag in Gruppe/Veranstaltung löschen}
+			\item[\textbf{FA403}]\textbf{Beitrag in Gruppe/Veranstaltung löschen}
 			\newline \textbf{Ziel:} Beitrag aus dem System löschen
 			\newline \textbf{Kategorie:} primär
 			\newline \textbf{Vorbedingungen:} Nutzer hat den Beitrag verfasst oder Nutzer ist Ersteller der Gruppe/Veranstaltung
@@ -577,7 +533,7 @@
 			\end{enumerate}
 			
 			%Beitrag bearbeiten
-			\item[\textbf{FA150}]\textbf{Beitrag bearbeiten}
+			\item[\textbf{FA404}]\textbf{Beitrag bearbeiten}
 			\newline \textbf{Ziel:} Ein veröffentlichter Beitrag bearbeiten
 			\newline \textbf{Kategorie:} primär
 			\newline \textbf{Vorbedingungen:} Beitrag ist vorhanden, Nutzer muss den Beitrag verfasst haben
@@ -598,7 +554,7 @@
 			\end{enumerate}
 			
 			%Beitrag in Gruppe/Veranstaltung bearbeiten
-			\item[\textbf{FA155}]\textbf{Beitrag in Gruppe/Veranstaltung bearbeiten}
+			\item[\textbf{FA405}]\textbf{Beitrag in Gruppe/Veranstaltung bearbeiten}
 			\newline \textbf{Ziel:} Ein veröffentlichter Beitrag in einer Gruppe/Veranstaltung bearbeiten
 			\newline \textbf{Kategorie:} primär
 			\newline \textbf{Vorbedingungen:} Gruppe/Veranstaltung und Beitrag sind vorhanden, Nutzer muss den Beitrag verfasst haben
@@ -620,7 +576,7 @@
 			\end{enumerate}
 	
 			%Beitrag mit "Gefällt mir" markieren
-			\item[\textbf{FA180}]\textbf{Beitrag mit "Gefällt mir" markieren}
+			\item[\textbf{FA406}]\textbf{Beitrag mit "Gefällt mir" markieren}
 						\newline \textbf{Ziel:} Zeigen das Beitrag dem Nutzer gefällt
 						\newline \textbf{Kategorie:} Primär
 						\newline \textbf{Vorbedingungen:} VNutzer muss angemeldet sein, Beitrag muss vorhanden sein
@@ -639,7 +595,7 @@
 						\end{enumerate}
 					
 					
-						\item[\textbf{FA180}]\textbf{Beitrag "Gefällt mir nicht mehr"}
+						\item[\textbf{FA407}]\textbf{Beitrag "Gefällt mir nicht mehr"}
 						\newline \textbf{Ziel:} Zeigen das Beitrag dem Nutzer nicht mehr gefällt
 						\newline \textbf{Kategorie:} primär
 						\newline \textbf{Vorbedingungen:} Beitrag muss vorhanden sein und von dem Nutzer mit "Gefällt mir" markiert sein
@@ -659,7 +615,7 @@
 						
 				
 			%Beiträge kommentieren
-			\item[\textbf{FA190}]\textbf{Beiträge kommentieren}
+			\item[\textbf{FA408}]\textbf{Beiträge kommentieren}
 				\newline \textbf{Ziel:} Meinungen/Informationen/Reaktion zu einem Beitrag äußern
 				\newline \textbf{Kategorie:} Primär
 				\newline \textbf{Vorbedingungen:} Nutzer muss eingeloggt sein, Beitrag muss vorhanden sein
@@ -680,7 +636,7 @@
 				\end{enumerate}
 			
 			%Fotos oder Videos als Beitrag veröffentlichen
-			\item[\textbf{FA190}]\textbf{Fotos oder Videos als Beitrag veröffentlichen}
+			\item[\textbf{FA409}]\textbf{Fotos oder Videos als Beitrag veröffentlichen} \label{sec:FA409}
 							\newline \textbf{Ziel:} Foto oder Video veröffentlichen
 							\newline \textbf{Kategorie:} Sekundär
 							\newline \textbf{Vorbedingungen:} Nutzer muss angemeldet sein und die Datei darf nicht größer sein als 10 Megabyte
@@ -701,7 +657,7 @@
 							\end{enumerate}
 			
 			%Markieren von Nutzern auf Beiträgen				
-			\item[\textbf{FA190}]\textbf{Markieren von Nutzern auf Beiträgen}
+			\item[\textbf{FA410}]\textbf{Markieren von Nutzern auf Beiträgen} \label{sec:FA410}
 			\newline \textbf{Ziel:} Nutzer auf ein Beitrag aufmerksam machen
 			\newline \textbf{Kategorie:} Sekundär
 			\newline \textbf{Vorbedingungen:} Die zu markierende Person muss ein Konto besitzen und Beitrag muss vorhanden sein
@@ -722,11 +678,11 @@
 													
 		\end{itemize}
 		
-		\subsection{Konto}
+		\subsection{Konto} \label{sec:FAKonto}
 		\begin{itemize}[nosep]
 			
 			%Konto erstellen
-			\item[\textbf{FA200}]\textbf{Konto erstellen}
+			\item[\textbf{FA500}]\textbf{Konto erstellen}
 							\newline \textbf{Ziel:} KAnnect zu benutzen
 							\newline \textbf{Kategorie:} Primär
 							\newline \textbf{Vorbedingungen:} Nutzer muss ein Google Konto besitzen und es darf nicht schon ein Konto registriert sein über diesem Google Konto
@@ -747,7 +703,7 @@
 							\end{enumerate}
 		
 			% Konto löschen			
-			\item[\textbf{FA210}]\textbf{Konto löschen}
+			\item[\textbf{FA501}]\textbf{Konto löschen}
 							\newline \textbf{Ziel:} App nicht mehr benutzen, alle Daten über Nutzer zu löschen
 							\newline \textbf{Kategorie:} Primär
 							\newline \textbf{Vorbedingungen:} Nutzer muss ein Konto haben und angemeldet sein
@@ -768,7 +724,7 @@
 							\end{enumerate}
 			
 			% anmelden				
-			\item[\textbf{FA220}]\textbf{anmelden}
+			\item[\textbf{FA502}]\textbf{anmelden}
 							\newline \textbf{Ziel:} App benutzen
 							\newline \textbf{Kategorie:} Primär
 							\newline \textbf{Vorbedingungen:} Nutzer muss registriert sein
@@ -787,7 +743,7 @@
 							\end{enumerate}
 						
 			% abmelden	
-			\item[\textbf{FA230}]\textbf{abmelden}
+			\item[\textbf{FA503}]\textbf{abmelden}
 							\newline \textbf{Ziel:} App nicht mehr benutzen oder sich mit einem anderen Kono anmelden
 							\newline \textbf{Kategorie:} Primär
 							\newline \textbf{Vorbedingungen:} Nutzer ist angemeldet
@@ -806,9 +762,9 @@
 							
 		\end{itemize}
 		
-		\subsection{Nachrichten}
+		\subsection{Nachrichten} \label{sec:FANachrichten}
 		\begin{itemize}[nosep]
-			\item[\textbf{FA240}]\textbf{Nachrichten schicken}
+			\item[\textbf{FA600}]\textbf{Nachrichten schicken}
 				\newline \textbf{Ziel:} Mit anderen Nutzern zu kommunizieren
 				\newline \textbf{Kategorie:} Primär
 				\newline \textbf{Vorbedingungen:} Nutzer ist angemeldet und Empfänger muss ein Konto haben
@@ -839,7 +795,7 @@
 						\end{enumerate}
 				\end{enumerate}
 										
-			\item[\textbf{FA250}]\textbf{ Nachrichten empfangen}
+			\item[\textbf{FA601}]\textbf{ Nachrichten empfangen}
 				\newline \textbf{Ziel:} Überprüfen ob neue Nachrichten im Briefkasten sind
 				\newline \textbf{Kategorie:} Primär
 				\newline \textbf{Vorbedingungen:} Nutzer ist angemeldet
@@ -860,7 +816,7 @@
 				
 				
 			% Konversation erstellen
-			\item[\textbf{FA250}]\textbf{ Konversationen erstellen}
+			\item[\textbf{FA602}]\textbf{ Konversationen erstellen} \label{sec:FA602}
 			\newline \textbf{Ziel:} Kommunikation mit anderen Nutzern
 			\newline \textbf{Kategorie:} Sekundär
 			\newline \textbf{Vorbedingungen:} Alle beteiligten Nutzer haben ein registriertes Konto 
@@ -884,7 +840,7 @@
 			
 			
 			% Konversation löschen
-			\item[\textbf{FA250}]\textbf{ Konversationen löschen}
+			\item[\textbf{FA603}]\textbf{ Konversationen löschen} \label{sec:FA603}
 			\newline \textbf{Ziel:} Löschen von Konversationen
 			\newline \textbf{Kategorie:} Sekundär
 			\newline \textbf{Vorbedingungen:} Konversation muss vorhanden sein, Nutzer muss Ersteller der Konversation sein
@@ -905,11 +861,11 @@
 			\end{enumerate}							
 		\end{itemize}
 		
-		\subsection{\gls{Feed}}
+		\subsection{\gls{Feed}} \label{sec:FAFeed}
 		\begin{itemize}[nosep]
 			
 			% Persönlicher Feed
-			\item[\textbf{FA260}]\textbf{persönlicher \gls{Feed}}
+			\item[\textbf{FA700}]\textbf{persönlicher \gls{Feed}}
 				\newline \textbf{Ziel:} Beiträge von abonnierten Veranstaltungen/Freunde und beigetretenen Gruppen zu sehen
 				\newline \textbf{Kategorie:} Primär
 				\newline \textbf{Vorbedingungen:} Nutzer ist angemeldet
@@ -930,87 +886,87 @@
 	\newpage
 	\section{Produktdaten}
 	\begin{itemize}
-		\item[\textbf{PD10}] \textbf{Nutzer}
+		\item[\textbf{PD100}] \textbf{Nutzer} \label{sec:PD100}
 			\begin{itemize}[nosep]
 				\item Name und Vorname
 				\item E-Mail
 				\item Hochschule
 				\item Fachrichtung
 				\item Profilbild
-				\item Abonnenten und Abonnements (PD10)
+				\item Abonnenten und Abonnements \hyperref[sec:PD100]{(PD100)}
 			\end{itemize}
-		\item[\textbf{PD20}] \textbf{Kategorie}
+		\item[\textbf{PD200}] \textbf{Kategorie} \label{sec:PD200}
 			\begin{itemize}[nosep]
 				\item Name der Kategorie
-				\item Guppen (PD30)
-				\item Veranstaltungen (PD40)
-				\item Unterkategorien (PD21)
+				\item Gruppen \hyperref[sec:PD300]{(PD300)}
+				\item Veranstaltungen \hyperref[sec:PD400]{(PD400)}
+				\item Unterkategorien \hyperref[sec:PD201]{(PD201)}
 			\end{itemize}
-		\item[\textbf{PD21}] \textbf{Unterkategorie}
+		\item[\textbf{PD201}] \textbf{Unterkategorie} \label{sec:PD201}
 			\begin{itemize}[nosep]
 				\item Name der Unterkategorie
-				\item Guppen(PD30)
-				\item Veranstaltungen (PD40)
+				\item Gruppen \hyperref[sec:PD300]{(PD300)}
+				\item Veranstaltungen \hyperref[sec:PD400]{(PD400)}
 			\end{itemize}
-		\item[\textbf{PD30}] \textbf{Gruppe}
+		\item[\textbf{PD300}] \textbf{Gruppe} \label{sec:PD300}
 			\begin{itemize}
 				\item Name der Gruppe
 				\item Beschreibung
-				\item Ersteller (PD10)
-				\item Kategorie (PD20) und Unterkategorie (PD21)
+				\item Ersteller \hyperref[sec:PD100]{(PD100)}
+				\item Kategorie \hyperref[sec:P200]{(PD200)} und Unterkategorie \hyperref[sec:PD201]{(PD201)}
 				\item Profilbild
 			\end{itemize}
-		\item[\textbf{PD40}] \textbf{Veranstaltung}
+		\item[\textbf{PD400}] \textbf{Veranstaltung} \label{sec:PD400}
 			\begin{itemize}[nosep]
 				\item Name der Veranstaltung
 				\item Beschreibung
-				\item Ersteller (PD10)
-				\item Kategorie (PD20) und Unterkategorie (PD21)
+				\item Ersteller \hyperref[sec:PD100]{(PD100)}
+				\item Kategorie \hyperref[sec:P200]{(PD200)} und Unterkategorie \hyperref[sec:PD201]{(PD201)}
 			\end{itemize}
-		\item[\textbf{PD50}] \textbf{Beitrag}
+		\item[\textbf{PD500}] \textbf{Beitrag} \label{sec:PD500}
 			\begin{itemize}[nosep]
 				\item Datum
 				\item Text
-				\item Ersteller (PD10)
+				\item Ersteller \hyperref[sec:PD100]{(PD100)}
 				\item Anzahl der "Gefällt mir"
 			\end{itemize}
-		\item[\textbf{PD60}] \textbf{Nachricht}
+		\item[\textbf{PD600}] \textbf{Nachricht} \label{sec:PD600}
 			\begin{itemize}[nosep]
 				\item Text
 				\item Erstelldatum
-				\item Absender (PD10)
-				\item Empfänger (PD10)	
+				\item Absender \hyperref[sec:PD100]{(PD100)}
+				\item Empfänger \hyperref[sec:PD100]{(PD100)}	
 			\end{itemize}
 	\end{itemize}
 	
 	\newpage
 	\section{Nichfunktionale Anforderungen}
 			
-			\begin{itemize}
-				\item[\textbf{NFA10}] \textbf{Sicherheit}
+			\begin{itemize} 
+				\item[\textbf{NFA100}] \textbf{Sicherheit} \label{sec:NFA100}
 					\begin{itemize}[nosep]
 						\item Kundendaten sollen verschlüsselt werden
 					\end{itemize}
-				\item[\textbf{NFA20}] \textbf{Zuverlässigkeit}
+				\item[\textbf{NFA200}] \textbf{Zuverlässigkeit} \label{sec:NFA200}
 					\begin{itemize}[nosep]
 						\item Nicht mehr als ein Ausfall pro Tag
 						\item Die App soll rund um die Uhr zur Verfüung stehen
 					\end{itemize}
-				\item[\textbf{NFA30}] \textbf{Erweiterbarkeit}
+				\item[\textbf{NFA300}] \textbf{Erweiterbarkeit} \label{sec:NFA300}
 					\begin{itemize}[nosep]
 						\item Neue Funktionalitäten sollen sich leicht hinzufügen lassen
 					\end{itemize}
-				\item[\textbf{NFA40}] \textbf{Benutzbarkeit}
+				\item[\textbf{NFA400}] \textbf{Benutzbarkeit} \label{sec:NFA400}
 					\begin{itemize}[nosep]
 						\item Beiträge in chronologischer Reihenfolge anzeigen
 						\item Nachrichten in chronologischer Reihenfolge anzeigen
 						\item 	Die Menüführung der App ist intuitiv für den Nutzer zu bedienen
 					\end{itemize}
-				\item[\textbf{NFA50}] \textbf{Effizienz und Leistung}
+				\item[\textbf{NFA500}] \textbf{Effizienz und Leistung} \label{sec:NFA500}
 					\begin{itemize}[nosep]
 						\item Läuft performant auf allen Handys
 					\end{itemize}
-				\item[\textbf{NFA60}] \textbf{Sprache}
+				\item[\textbf{NFA600}] \textbf{Sprache} \label{sec:NFA600}
 					\begin{itemize}[nosep]
 						\item Die Texte der GUI sollen in deutscher Sprache verfasst sein
 						\item Weitere Sprachen sollen sich leicht hinzufügen lassen
