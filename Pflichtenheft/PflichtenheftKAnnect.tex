@@ -4,12 +4,29 @@
 \usepackage[T1]{fontenc}
 \usepackage[ngerman]{babel} %ngermen = new german
 \usepackage{hyperref}
+\usepackage{glossaries}
+\makenoidxglossaries
+
+	\newglossaryentry{Feed}{name={Feed},description={Eine Seite, auf der ein Nutzer aktuelle Beiträge sehen kann.}}
+	\newglossaryentry{App}{name={App},description={App ist eine Abkürzung für das englische Wort Application. Dies Bedeutet Anwendung. Eine App ist also eine Anwendung/Programm, welches eine gewisse Funktion ausführt.}}
+	\newglossaryentry{AdminRechte}{name={Admin Rechte},description={Der Ersteller einer Veranstaltung oder Gruppe hat diese Rechte. Damit sind die Rechte gemeint, Beiträge aus der Gruppe/Veranstaltung zu löschen oder zu bearbeiten, genauso wie die Rechte die Gruppe/Veranstaltung zu bearbeiten oder zu löschen.}}
+	\newglossaryentry{Button}{name={Button},description={Ein Knopf der gedrückt werden kann. Dies führt zu einer}}
+	\newglossaryentry{Abonnenten}{name={Abonnenten},description={}}
+	\newglossaryentry{Abonnements}{name={Abonnements},description={}}
+	\newglossaryentry{Marketplace}{name={Marketplace},description={}}
+	\newglossaryentry{GoogleKonto}{name={Google Konto},description={}}
+	\newglossaryentry{Konversation}{name={Konversation},description={}}
+	\newglossaryentry{Kategorie}{name={Kategorie},description={}}
+	\newglossaryentry{Unterkategorie}{name={Unterkategorie},description={}}
+
 \hypersetup{pdftitle= {PSE: Pflichtenheft,
 		bookmarks=true,
 }}
+
 \usepackage{csquotes}
 \usepackage{graphicx}
 \usepackage{enumitem}
+
 \usepackage[margin=2.5cm]{geometry}
 	\title{KAnnect}
 	\subtitle{Pflichtenheft}
@@ -23,6 +40,11 @@
 		\and Florian Giner
 	}
 	\date{Sommersemester 2018}
+\graphicspath{/home/florian/Documents}
+\usepackage{cleveref}
+
+
+
 	
 \begin{document}
 	%\input{Deckblatt.tex}
@@ -63,7 +85,7 @@
 				\item versenden, erhalten von Nachrichten
 				\item Veröffentlichung von Beiträgen von Nutzern
 			\end{itemize}
-			\item Beiträge im Feed darstellen
+			\item Beiträge im \gls{Feed} darstellen
 				\begin{itemize}
 					\item von gefolgten Kontakten/Gruppen/Veranstaltungen
 					\item anwenden von Filterkriterien
@@ -71,7 +93,7 @@
 				\end{itemize}
 			\item Kommentieren von Beiträgen
 				\begin{itemize}
-					\item Speichern chronologisch , löschen, Ändern
+					\item chronologisch Speichern, löschen, Ändern
 				\end{itemize}	
 	\end{itemize}
 	
@@ -145,6 +167,8 @@
 		\item Das Produkt soll nur auf Mobilfunk Telefone erhältlich sein.
 		\item Kein Marketplace
 	\end{itemize}
+	\newpage
+	
 	
 	\section{Produkteinsatz}
 	Das Produkt soll eine Plattform bereitstellen, die das alltägliche Leben und Studieren in Karlsruhe nicht nur erleichtert, sondern auch verbindet. So sollen Nutzer leicht an Informationen über Veranstaltungen der jeweiligen Hochschule gelangen, wie auch an Informationen über Freizeitaktivitäten. Desweiteren bietet das Produkt noch die Möglichkeit sich leicht darüber zu unterhalten und Meinungen mit anderen Nutzern zu teilen.
@@ -172,7 +196,7 @@
 	
 	\subsection{Hardware}
 	
-	
+	\newpage
 	\section{Funktionale Anforderungen}
 		\subsection{Freunde}
 		\begin{itemize}[nosep]
@@ -206,7 +230,7 @@
 				\newline \textbf{Vorbedingungen:} Nutzer und Freund müssen ein Konto besitzen
 				\newline \textbf{Nachbedingungen (Erfolg):} 
 				\begin{enumerate}[nosep]
-					\item Freund wird zu der Abonnentenliste von dem Nutzer hinzugefügt
+					\item Freund wird zu der Liste der Abonnements des Nutzer hinzugefügt
 					\item “Abonnieren” Button wird zu “Nicht mehr abonnieren” Button
 				\end{enumerate}
 				\textbf{Nachbedingungen (Fehlschlag):}
@@ -220,12 +244,12 @@
 			
 			% Freund nicht mehr abonnieren
 			\item[\textbf{\large FA30}]\textbf{\large Freund nicht mehr abonnieren}
-				\newline \textbf{Ziel:} Freund aus der Liste der Abonnenten löschen, damit seine Beiträge nicht mehr im Feed erscheinen
+				\newline \textbf{Ziel:} Freund aus der Liste der Abonnenten löschen, damit seine Beiträge nicht mehr im \gls{Feed} erscheinen
 				\newline \textbf{Kategorie:} primär
 				\newline \textbf{Vorbedingungen:} Freund muss schon abonniert sein
 				\newline \textbf{Nachbedingungen (Erfolg):} 
 				\begin{enumerate}[nosep]
-					\item Freund wird aus der Liste der Abonnenten des Nutzers gelöscht
+					\item Freund wird aus der Liste der Abonnements des Nutzers gelöscht
 					\item “nicht mehr abonnieren” Button wird zu “Abonnieren” Button
 				\end{enumerate}
 				\textbf{Nachbedingungen (Fehlschlag):}
@@ -324,69 +348,7 @@
 					\item Anzeigen einer Bestätigungsnachricht\\
 				\end{enumerate}
 							
-			% Beitrag in Gruppen
-			\item[\textbf{FA80}]\textbf{Beitrag in Gruppe veröffentlichen}
-				\newline \textbf{Ziel:} Kommunikation in der Gruppe
-				\newline \textbf{Kategorie:} primär
-				\newline \textbf{Vorbedingungen:} Nutzer ist Mitglied der Gruppe
-				\newline \textbf{Nachbedingungen (Erfolg):} 
-				\begin{enumerate}[nosep]
-					\item Es wird ein neuer Beitrag in der Gruppe veröffentlicht 
-				\end{enumerate}
-				\textbf{Nachbedingungen (Fehlschlag):}
-				\newline \textbf{Akteure:} Mitglied der Gruppe
-				\newline \textbf{Auslösendes Ereignis:} Anfrage eines Mitglieds der Gruppe
-				\newline \textbf{Beschreibung:}
-				\begin{enumerate}[nosep]
-					\item Auf die Seite der Gruppe navigieren
-					\item Beitrag schreiben und auf den Button “Veröffentlichen” klicken
-					\item  Beitrag erscheint im Feed der Gruppe\\
-				\end{enumerate}
 		
-		% Beitrag in Gruppe löschen
-		\item[\textbf{FA80}]\textbf{Beitrag in Gruppe löschen}
-			\newline \textbf{Ziel:} Beiträge aus dem System löschen
-			\newline \textbf{Kategorie:} primär
-			\newline \textbf{Vorbedingungen:} Nutzer hat Beitrag verfasst oder ist Ersteller der Gruppe und Beitrag muss vorhanden sein
-			\newline \textbf{Nachbedingungen (Erfolg):} 
-			\begin{enumerate}[nosep]
-				\item Beitrag wird aus dem System gelöscht
-				\item Beitrag wird nicht mehr angezeigt 
-			\end{enumerate}
-			\textbf{Nachbedingungen (Fehlschlag):}
-			\newline \textbf{Akteure:} Ersteller der Gruppe oder Verfasser des Beitrags
-			\newline \textbf{Auslösendes Ereignis:} Anfrage des Erstellers der Gruppe oder des Verfassers des Beitrags
-			\newline \textbf{Beschreibung:}
-			\begin{enumerate}[nosep]
-				\item Auf die Seite der Gruppe navigieren
-				\item Zu dem zu löschenden Beitrag navigieren
-				\item Auf den Button “Beitrag löschen” klicken
-				\item Aktion bestätigen
-				\item Anzeigen einer Bestätigungsnachricht
-				\item Beitrag verschwindet aus dem Feed der Gruppe\\
-			\end{enumerate}
-						
-		% Beitrag in Gruppe bearbeiten		
-		\item[\textbf{FA80}]\textbf{Beitrag in Gruppe bearbeiten}
-			\newline \textbf{Ziel:} ein veröffentlichter Beitrag in einer Gruppe ändern
-			\newline \textbf{Kategorie:} primär
-			\newline \textbf{Vorbedingungen:} Gruppe und Beitrag sind vorhanden, Nutzer muss Beitrag verfasst haben oder Ersteller der Gruppe sein
-			\newline \textbf{Nachbedingungen (Erfolg):} 
-			\begin{enumerate}[nosep]
-				\item Beitrag wird geändert 
-			\end{enumerate}
-			\textbf{Nachbedingungen (Fehlschlag):}
-			\newline \textbf{Akteure:} Ersteller des Beitrags
-			\newline \textbf{Auslösendes Ereignis:} Anfrage des Erstellers des Beitrags
-			\newline \textbf{Beschreibung:}
-			\begin{enumerate}[nosep]
-				\item Auf die Seite der Gruppe navigieren
-				\item Zu dem Beitrag der geändert werden soll navigieren
-				\item Auf “Beitrag bearbeiten” klicken
-				\item Beitrag bearbeiten
-				\item ”Änderungen speichern” klicken
-				\item Geänderter Beitrag erscheint im Feed der Gruppe\\
-			\end{enumerate}
 						
 		\end{itemize}
 		
@@ -437,7 +399,7 @@
 			
 			%Veranstaltung abonnieren
 			\item[\textbf{FA120}]\textbf{Veranstaltung abonnieren}
-			\newline \textbf{Ziel:} Neuigkeiten und Informationen der Veranstaltung im Feed erhalten
+			\newline \textbf{Ziel:} Neuigkeiten und Informationen der Veranstaltung im \gls{Feed} erhalten
 			\newline \textbf{Kategorie:} primär
 			\newline \textbf{Vorbedingungen:} Veranstaltung muss vorhanden sein, Nutzer muss ein Konto haben
 			\newline \textbf{Nachbedingungen (Erfolg):} 
@@ -457,7 +419,7 @@
 						
 			%Veranstaltung nicht mehr abonnieren
 			\item[\textbf{FA130}]\textbf{Veranstaltung nicht mehr abonnieren}
-			\newline \textbf{Ziel:} Veranstaltungs Neuigkeiten und Beiträge nicht mehr im Feed angezeigt zu bekommen
+			\newline \textbf{Ziel:} Veranstaltungs Neuigkeiten und Beiträge nicht mehr im \gls{Feed} angezeigt zu bekommen
 			\newline \textbf{Kategorie:} primär
 			\newline \textbf{Vorbedingungen:} Nutzer muss die Veranstaltung abonniert haben
 			\newline \textbf{Nachbedingungen (Erfolg):} 
@@ -468,7 +430,7 @@
 			\textbf{Nachbedingungen (Fehlschlag):}
 			\newline \textbf{Akteure:} Nutzer
 			\newline \textbf{Auslösendes Ereignis:} Anfrage des Nutzers
-			\newline\newline \textbf{Beschreibung:}
+			\newline \textbf{Beschreibung:}
 			\begin{enumerate}[nosep]
 				\item Zur Seite der Veranstaltung navigieren
 				\item “Veranstaltung nicht mehr abonnieren” klicken
@@ -488,7 +450,7 @@
 			\textbf{Nachbedingungen (Fehlschlag):}
 			\newline \textbf{Akteure:} Nutzer
 			\newline \textbf{Auslösendes Ereignis:} Anfrage des Nutzers
-			\newline\newline \textbf{Beschreibung:}
+			\newline \textbf{Beschreibung:}
 			\begin{enumerate}[nosep]
 				\item Zur Seite der Veranstaltung navigieren
 				\item “Veranstaltung bearbeiten” klicken
@@ -498,72 +460,27 @@
 			\end{enumerate}
 				
 								
-			%Beitrag in Veranstaltung veröffentlichen
-			\item[\textbf{FA110}]\textbf{Beitrag in Veranstaltung veröffentlichen}
-				\newline \textbf{Ziel:} Mitteilen von Informationen/Meinungen in einer Veranstaltung
-				\newline \textbf{Kategorie:} primär
-				\newline \textbf{Vorbedingungen:} Veranstaltung ist vorhanden, Veranstaltung ist abonniert vom Nutzer
-				\newline \textbf{Nachbedingungen (Erfolg):} 
-				\begin{enumerate}[nosep]
-					\item Beitrag wird in der Veranstaltung veröffentlicht und auf dem Feed der Veranstaltung angezeigt
-					\item Beitrag wird auf dem Feed der Nutzer angezeigt, die der Veranstaltung folgen
-				\end{enumerate}
-				\textbf{Nachbedingungen (Fehlschlag):}
-				\newline \textbf{Akteure:} Nutzer
-				\newline \textbf{Auslösendes Ereignis:} Anfrage des Nutzers
-				\newline \textbf{Beschreibung:}
-				\begin{enumerate}[nosep]
-					\item Auf die Seite der Veranstaltung navigieren
-					\item Auf den Button “Beitrag erstellen” klicken
-					\item Beitrag erstellen
-					\item ”Beitrag veröffentlichen” klicken\\
-				\end{enumerate}
 			
-			%Beitrag in Veranstaltung löschen
-			\item[\textbf{FA120}]\textbf{Beitrag in Veranstaltung löschen}	
-				\newline \textbf{Ziel:} Beitrag aus dem System löschen
-				\newline \textbf{Kategorie:} primär
-				\newline \textbf{Vorbedingungen:} Nutzer hat den Beitrag verfasst oder Nutzer ist Ersteller der Veranstaltung
-				\newline \textbf{Nachbedingungen (Erfolg):} 
-				\begin{enumerate}[nosep]
-					\item Beitrag wird aus dem System gelöscht
-					\item Beitrag wird nicht mehr angezeigt 
-				\end{enumerate}
-				\textbf{Nachbedingungen (Fehlschlag):}
-				\newline \textbf{Akteure:} Ersteller der Veranstaltung oder des Beitrags
-				\newline \textbf{Auslösendes Ereignis:} Anfrage des Nutzers
-				\newline \textbf{Beschreibung:}
-				\begin{enumerate}[nosep]
-					\item Auf die Seite der Veranstaltung navigieren
-					\item Zu dem zu löschenden Beitrag navigieren
-					\item Aktion bestätigen
-					\item Anzeigen einer Bestätigungsnachricht
-					\item Beitrag verschwindet aus dem Feed der Veranstaltung\\
-				\end{enumerate}
-			
-			%Beitrag in Veranstaltung bearbeiten
-			\item[\textbf{FA120}]\textbf{Beitrag in Veranstaltung bearbeiten}	
-			\newline \textbf{Ziel:} Ein veröffentlichter Beitrag in einer Veranstaltung bearbeiten
-			\newline \textbf{Kategorie:} primär
-			\newline \textbf{Vorbedingungen:} Veranstaltung und Beitrag sind vorhanden, Nutzer muss den Beitrag verfasst haben
+				
+						
+			% Veranstaltung auf Karte ansehen
+			\item[\textbf{FA120}]\textbf{Veranstaltung auf Karte ansehen}	
+			\newline \textbf{Ziel:} Herausfinden wo Veranstaltung stattfindet
+			\newline \textbf{Kategorie:} Sekundär
+			\newline \textbf{Vorbedingungen:} Veranstaltung ist vorhanden und Adresse wurde angegeben
 			\newline \textbf{Nachbedingungen (Erfolg):} 
 			\begin{enumerate}[nosep]
-				\item Beitrag wird geändert 
+				\item Veranstaltung wird auf Karte angezeigt
 			\end{enumerate}
 			\textbf{Nachbedingungen (Fehlschlag):}
-			\newline \textbf{Akteure:} Ersteller des Beitrags
+			\newline \textbf{Akteure:} Nutzer
 			\newline \textbf{Auslösendes Ereignis:} Anfrage des Nutzers
 			\newline \textbf{Beschreibung:}
 			\begin{enumerate}[nosep]
 				\item Auf die Seite der Veranstaltung navigieren
-				\item Zu dem Beitrag navigieren der geändert werden soll
-				\item Auf "Beitrag bearbeiten" klicken
-				\item Beitrag bearbeiten
-				\item "Änderungen speichern" klicken
-				\item Geänderter Beitrag erscheint im Feed der Veranstaltung\\
+				\item Auf "Auf Karte anzeigen" drücken
+				\item Nutzer wird auf die Seite der Karte geleitet\\
 			\end{enumerate}
-						
-
 
 							
 		\end{itemize}
@@ -571,14 +488,137 @@
 		\subsection{Beiträge}
 		\begin{itemize}[nosep]
 			%Beitrag veröffentlichen
-			\item[\textbf{FA150}]\textbf{Beitrag veröffentlichen}
+			\item[\textbf{FA130}]\textbf{Beitrag veröffentlichen}
+			\newline \textbf{Ziel:} Mitteilen von Informationen/Meinungen
+			\newline \textbf{Kategorie:} primär
+			\newline \textbf{Vorbedingungen:}
+			\newline \textbf{Nachbedingungen (Erfolg):}
+			\begin{enumerate}[nosep]
+				\item Beitrag wird  veröffentlicht
+				\item Beitrag wird auf dem \gls{Feed} der abonnenten des Nutzers angezeigt
+			\end{enumerate}
+			\textbf{Nachbedingungen (Fehlschlag):}
+			\newline \textbf{Akteure:} Nutzer
+			\newline \textbf{Auslösendes Ereignis:} Anfrage des Nutzers
+			\newline \textbf{Beschreibung:}
+			\begin{enumerate}[nosep]
+				\item Auf die Hauptseite navigieren
+				\item Auf den Button “Beitrag erstellen” klicken
+				\item Beitrag erstellen
+				\item ”Beitrag veröffentlichen” klicken\\
+			\end{enumerate}
 			
-			%Beitrag löschen
-			\item[\textbf{FA160}]\textbf{Beitrag löschen}
+			%Beitrag Gruppe/Veranstaltung veröffentlichen
+			\item[\textbf{FA135}]\textbf{Beitrag in Gruppe/Veranstaltung veröffentlichen}
+			\newline \textbf{Ziel:} Mitteilen von Informationen/Meinungen in einer Gruppe/Veranstaltung
+			\newline \textbf{Kategorie:} primär
+			\newline \textbf{Vorbedingungen:}
+			\begin{enumerate}[nosep]
+				\item Gruppe/Veranstaltung ist vorhanden,
+				\item Gruppe/Veranstaltung ist abonniert vom Nutzer
+			\end{enumerate}
+			\textbf{Nachbedingungen (Erfolg):}
+			\begin{enumerate}[nosep]
+				\item Beitrag wird in der Veranstaltung veröffentlicht und auf dem \gls{Feed} der Veranstaltung angezeigt
+				\item Beitrag wird auf dem \gls{Feed} der Nutzer angezeigt, die der Veranstaltung folgen
+			\end{enumerate}
+			\textbf{Nachbedingungen (Fehlschlag):}
+			\newline \textbf{Akteure:} Nutzer
+			\newline \textbf{Auslösendes Ereignis:} Anfrage des Nutzers
+			\newline \textbf{Beschreibung:}
+			\begin{enumerate}[nosep]
+				\item Auf die Seite der Gruppe/Veranstaltung navigieren
+				\item Auf den Button “Beitrag erstellen” klicken
+				\item Beitrag erstellen
+				\item ”Beitrag veröffentlichen” klicken\\
+			\end{enumerate}
+			
+			%Beitrag  löschen
+			\item[\textbf{FA140}]\textbf{Beitrag löschen}
+			\newline \textbf{Ziel:} Beitrag aus dem System löschen
+			\newline \textbf{Kategorie:} primär
+			\newline \textbf{Vorbedingungen:} Nutzer hat den Beitrag verfasst
+			\newline \textbf{Nachbedingungen (Erfolg):}
+			\begin{enumerate}[nosep]
+				\item Beitrag wird aus dem System gelöscht
+				\item Beitrag wird nicht mehr angezeigt
+			\end{enumerate}
+			\textbf{Nachbedingungen (Fehlschlag):}
+			\newline \textbf{Akteure:} Ersteller des Beitrags
+			\newline \textbf{Auslösendes Ereignis:} Anfrage des Nutzers
+			\newline \textbf{Beschreibung:}
+			\begin{enumerate}[nosep]
+				\item Zu dem zu löschenden Beitrag navigieren
+				\item Aktion bestätigen
+				\item Anzeigen einer Bestätigungsnachricht
+				\item Beitrag verschwindet aus dem \gls{Feed}\\
+			\end{enumerate}
+			
+			%Beitrag in Gruppe/Veranstaltung löschen
+			\item[\textbf{FA145}]\textbf{Beitrag in Gruppe/Veranstaltung löschen}
+			\newline \textbf{Ziel:} Beitrag aus dem System löschen
+			\newline \textbf{Kategorie:} primär
+			\newline \textbf{Vorbedingungen:} Nutzer hat den Beitrag verfasst oder Nutzer ist Ersteller der Gruppe/Veranstaltung
+			\newline \textbf{Nachbedingungen (Erfolg):}
+			\begin{enumerate}[nosep]
+				\item Beitrag wird aus dem System gelöscht
+				\item Beitrag wird nicht mehr angezeigt
+			\end{enumerate}
+			\textbf{Nachbedingungen (Fehlschlag):}
+			\newline \textbf{Akteure:} Ersteller der Gruppe/Veranstaltung oder des Beitrags
+			\newline \textbf{Auslösendes Ereignis:} Anfrage des Nutzers
+			\newline \textbf{Beschreibung:}
+			\begin{enumerate}[nosep]
+				\item Auf die Seite der Gruppe/Veranstaltung navigieren
+				\item Zu dem zu löschenden Beitrag navigieren
+				\item Aktion bestätigen
+				\item Anzeigen einer Bestätigungsnachricht
+				\item Beitrag verschwindet aus dem \gls{Feed} der Veranstaltung\\
+			\end{enumerate}
 			
 			%Beitrag bearbeiten
-			\item[\textbf{FA170}]\textbf{Beitrag bearbeiten}
+			\item[\textbf{FA150}]\textbf{Beitrag bearbeiten}
+			\newline \textbf{Ziel:} Ein veröffentlichter Beitrag bearbeiten
+			\newline \textbf{Kategorie:} primär
+			\newline \textbf{Vorbedingungen:} Beitrag ist vorhanden, Nutzer muss den Beitrag verfasst haben
+			\newline \textbf{Nachbedingungen (Erfolg):}
+			\begin{enumerate}[nosep]
+				\item Beitrag wird geändert
+			\end{enumerate}
+			\textbf{Nachbedingungen (Fehlschlag):}
+			\newline \textbf{Akteure:} Ersteller des Beitrags
+			\newline \textbf{Auslösendes Ereignis:} Anfrage des Nutzers
+			\newline \textbf{Beschreibung:}
+			\begin{enumerate}[nosep]
+				\item Zu dem Beitrag navigieren der geändert werden soll
+				\item Auf "Beitrag bearbeiten" klicken
+				\item Beitrag bearbeiten
+				\item "Änderungen speichern" klicken
+				\item Beitrag ist geändert\\
+			\end{enumerate}
 			
+			%Beitrag in Gruppe/Veranstaltung bearbeiten
+			\item[\textbf{FA155}]\textbf{Beitrag in Gruppe/Veranstaltung bearbeiten}
+			\newline \textbf{Ziel:} Ein veröffentlichter Beitrag in einer Gruppe/Veranstaltung bearbeiten
+			\newline \textbf{Kategorie:} primär
+			\newline \textbf{Vorbedingungen:} Gruppe/Veranstaltung und Beitrag sind vorhanden, Nutzer muss den Beitrag verfasst haben
+			\newline \textbf{Nachbedingungen (Erfolg):}
+			\begin{enumerate}[nosep]
+				\item Beitrag wird geändert
+			\end{enumerate}
+			\textbf{Nachbedingungen (Fehlschlag):}
+			\newline \textbf{Akteure:} Ersteller des Beitrags
+			\newline \textbf{Auslösendes Ereignis:} Anfrage des Nutzers
+			\newline \textbf{Beschreibung:}
+			\begin{enumerate}[nosep]
+				\item Auf die Seite der Gruppe/Veranstaltung navigieren
+				\item Zu dem Beitrag navigieren der geändert werden soll
+				\item Auf "Beitrag bearbeiten" klicken
+				\item Beitrag bearbeiten
+				\item "Änderungen speichern" klicken
+				\item Beitrag ist geändert\\
+			\end{enumerate}
+	
 			%Beitrag mit "Gefällt mir" markieren
 			\item[\textbf{FA180}]\textbf{Beitrag mit "Gefällt mir" markieren}
 						\newline \textbf{Ziel:} Zeigen das Beitrag dem Nutzer gefällt
@@ -638,7 +678,48 @@
 					\item Kommentar schreiben
 					\item “Kommentar veröffentlichen” klicken\\
 				\end{enumerate}
-									
+			
+			%Fotos oder Videos als Beitrag veröffentlichen
+			\item[\textbf{FA190}]\textbf{Fotos oder Videos als Beitrag veröffentlichen}
+							\newline \textbf{Ziel:} Foto oder Video veröffentlichen
+							\newline \textbf{Kategorie:} Sekundär
+							\newline \textbf{Vorbedingungen:} Nutzer muss angemeldet sein und die Datei darf nicht größer sein als 10 Megabyte
+							\newline \textbf{Nachbedingungen (Erfolg):} 
+							\begin{enumerate}[nosep]
+								\item Foto/Video werden hochgeladen
+								\item Foto/Video wird als Beitrag angezeigt 
+							\end{enumerate}
+							\textbf{Nachbedingungen (Fehlschlag):} Fehlernachricht wird angezeigt
+							\newline \textbf{Akteure:} Nutzer
+							\newline \textbf{Auslösendes Ereignis:} Anfrage des Nutzers
+							\newline \textbf{Beschreibung:}
+							\begin{enumerate}[nosep]
+								\item zu dem \gls{Feed} navigieren in dem die Datei hochgeladen werden soll
+								\item Auf "Foto/Video veröffentlichen" klicken
+								\item Datei auswählen
+								\item Aktion bestätigen\\
+							\end{enumerate}
+			
+			%Markieren von Nutzern auf Beiträgen				
+			\item[\textbf{FA190}]\textbf{Markieren von Nutzern auf Beiträgen}
+			\newline \textbf{Ziel:} Nutzer auf ein Beitrag aufmerksam machen
+			\newline \textbf{Kategorie:} Sekundär
+			\newline \textbf{Vorbedingungen:} Die zu markierende Person muss ein Konto besitzen und Beitrag muss vorhanden sein
+			\newline \textbf{Nachbedingungen (Erfolg):} 
+			\begin{enumerate}[nosep]
+				\item Beitrag wird auf dem \gls{Feed} der markierten Person angezeigt 
+			\end{enumerate}
+			\textbf{Nachbedingungen (Fehlschlag):}
+			\newline \textbf{Akteure:} Nutzer
+			\newline \textbf{Auslösendes Ereignis:} Anfrage des Nutzers
+			\newline \textbf{Beschreibung:}
+			\begin{enumerate}[nosep]
+				\item Zu dem Beitrag navigieren
+				\item Auf den "Kommentieren" Button klicken
+				\item Im Kommentar @(Name der zu markierenden Person) verwenden
+				\item "Kommentar veröffentlichen" klicken\\
+			\end{enumerate}
+													
 		\end{itemize}
 		
 		\subsection{Konto}
@@ -652,7 +733,7 @@
 							\newline \textbf{Nachbedingungen (Erfolg):} 
 							\begin{enumerate}[nosep]
 								\item Konto wird erstellt und gespeichert
-								\item Nutzer wird zu seinem Feed weitergeleitet 
+								\item Nutzer wird zu seinem \gls{Feed} weitergeleitet 
 							\end{enumerate}
 							\textbf{Nachbedingungen (Fehlschlag):} Eine Fehlernachricht wird angezeigt
 							\newline \textbf{Akteure:} Nutzer
@@ -693,7 +774,7 @@
 							\newline \textbf{Vorbedingungen:} Nutzer muss registriert sein
 							\newline \textbf{Nachbedingungen (Erfolg):} 
 							\begin{enumerate}[nosep]
-								\item Nutzer wird zu seinem Feed weitergeleitet 
+								\item Nutzer wird zu seinem \gls{Feed} weitergeleitet 
 							\end{enumerate}
 							\textbf{Nachbedingungen (Fehlschlag):}
 							\newline \textbf{Akteure:} Nutzer
@@ -754,7 +835,7 @@
 							\item “Nachricht schicken” klicken
 							\item Empfänger auswählen
 							\item Nachricht schreiben
-							\item Auf den Button “Schicken” klicken
+							\item Auf den Button “Schicken” klicken\\
 						\end{enumerate}
 				\end{enumerate}
 										
@@ -776,29 +857,77 @@
 					\item Auf die neue Nachricht klicken
 					\item Nachricht wird geöffnet\\
 				\end{enumerate}
-										
+				
+				
+			% Konversation erstellen
+			\item[\textbf{FA250}]\textbf{ Konversationen erstellen}
+			\newline \textbf{Ziel:} Kommunikation mit anderen Nutzern
+			\newline \textbf{Kategorie:} Sekundär
+			\newline \textbf{Vorbedingungen:} Alle beteiligten Nutzer haben ein registriertes Konto 
+			\newline \textbf{Nachbedingungen (Erfolg):} 
+			\begin{enumerate}[nosep]
+				\item Konversation wird erstellt
+				\item Konversation wird angezeigt 
+			\end{enumerate}
+			\textbf{Nachbedingungen (Fehlschlag):}
+			\newline \textbf{Akteure:} Nutzer
+			\newline \textbf{Auslösendes Ereignis:} Anfrage des Nutzers
+			\newline \textbf{Beschreibung:}
+			\begin{enumerate}[nosep]
+				\item Zu "Nachrichten" navigieren
+				\item "Konversation erstellen" klicken
+				\item "Name der Konversation eingeben"
+				\item Nutzer auswählen die in Konversation eingeladen werden sollen
+				\item "Bestätigen" klicken
+				\item Nutzer wird auf die Seite der Konversation geleitet\\
+			\end{enumerate}
+			
+			
+			% Konversation löschen
+			\item[\textbf{FA250}]\textbf{ Konversationen löschen}
+			\newline \textbf{Ziel:} Löschen von Konversationen
+			\newline \textbf{Kategorie:} Sekundär
+			\newline \textbf{Vorbedingungen:} Konversation muss vorhanden sein, Nutzer muss Ersteller der Konversation sein
+			\newline \textbf{Nachbedingungen (Erfolg):} 
+			\begin{enumerate}[nosep]
+				\item Konversation wird aus dem System gelöscht
+				\item Konversation wird nicht mehr angezeigt 
+			\end{enumerate}
+			\textbf{Nachbedingungen (Fehlschlag):}
+			\newline \textbf{Akteure:} Ersteller der Konversation
+			\newline \textbf{Auslösendes Ereignis:} Anfrage des ERstellers
+			\newline \textbf{Beschreibung:}
+			\begin{enumerate}[nosep]
+				\item Zu "Nachrichten" navigieren
+				\item Zu der Konversation navigieren
+				\item "Konversation löschen" klicken
+				\item Nutzer wird auf die Seite der Nachrichten geleitet\\
+			\end{enumerate}							
 		\end{itemize}
 		
-		\subsection{Feed}
+		\subsection{\gls{Feed}}
 		\begin{itemize}[nosep]
 			
 			% Persönlicher Feed
-			\item[\textbf{FA260}]\textbf{persönlicher Feed}
-							\newline \textbf{Ziel:} Beiträge von abonnierten Veranstaltungen/Freunde und beigetretenen Gruppen zu sehen
-							\newline \textbf{Kategorie:} Primär
-							\newline \textbf{Vorbedingungen:} Nutzer ist angemeldet
-							\newline \textbf{Nachbedingungen (Erfolg):} 
-							\begin{enumerate}[nosep]
-								\item Beiträge werden im Feed angezeigt 
-							\end{enumerate}
-							\textbf{Nachbedingungen (Fehlschlag):}
-							\newline \textbf{Akteure:} Nutzer
-							\newline \textbf{Auslösendes Ereignis:} Anfrage des Nutzers
-							\newline \textbf{Beschreibung:}
-							\begin{enumerate}[nosep]
-								\item Zum Feed navigieren\\
-							\end{enumerate}
+			\item[\textbf{FA260}]\textbf{persönlicher \gls{Feed}}
+				\newline \textbf{Ziel:} Beiträge von abonnierten Veranstaltungen/Freunde und beigetretenen Gruppen zu sehen
+				\newline \textbf{Kategorie:} Primär
+				\newline \textbf{Vorbedingungen:} Nutzer ist angemeldet
+				\newline \textbf{Nachbedingungen (Erfolg):} 
+				\begin{enumerate}[nosep]
+					\item Beiträge werden im \gls{Feed} angezeigt 
+				\end{enumerate}
+				\textbf{Nachbedingungen (Fehlschlag):}
+				\newline \textbf{Akteure:} Nutzer
+				\newline \textbf{Auslösendes Ereignis:} Anfrage des Nutzers
+				\newline \textbf{Beschreibung:}
+				\begin{enumerate}[nosep]
+					\item Zum \gls{Feed} navigieren\\
+				\end{enumerate}
 		\end{itemize}
+		
+		
+	\newpage
 	\section{Produktdaten}
 	\begin{itemize}
 		\item[\textbf{PD10}] \textbf{Nutzer}
@@ -854,6 +983,7 @@
 			\end{itemize}
 	\end{itemize}
 	
+	\newpage
 	\section{Nichfunktionale Anforderungen}
 			
 			\begin{itemize}
@@ -886,19 +1016,22 @@
 						\item Weitere Sprachen sollen sich leicht hinzufügen lassen
 					\end{itemize}
 			\end{itemize}	
+	
+	\newpage
 	\section{Globale Testfälle}
 	
+	\newpage
 	\section{Systemmodelle}
 	\subsection{Szenarien}
 		\subsubsection{Registrierung}
-		Bob möchte sich über die Veranstaltungen an den Hochschulen in Karlsruhe informieren, Beiträge von Gruppen sehen und kommentieren. Deswegen geht er auf Google-Play, um eine passende App zu finden. Er findet KAnnect und ist sofort überzeugt. Er klickt auf den "Herunterladen" Button. Nach der Installation öffnet Bob die App und klickt auf “Neues Konto erstellen”. Bob registriert sich erfolgreich mit seinem Google-Konto. Dann wird er zu seinem Feed weitergeleitet.
+		Bob möchte sich über die Veranstaltungen an den Hochschulen in Karlsruhe informieren, Beiträge von Gruppen sehen und kommentieren. Deswegen geht er auf Google-Play, um eine passende App zu finden. Er findet KAnnect und ist sofort überzeugt. Er klickt auf den "Herunterladen" Button. Nach der Installation öffnet Bob die App und klickt auf “Neues Konto erstellen”. Bob registriert sich erfolgreich mit seinem Google-Konto. Dann wird er zu seinem \gls{Feed} weitergeleitet.
 		
 		\subsubsection{Freunde}
-		Alex ist ein neuer Student in Karlsruhe.  Während der O-Phase hat er einen Kommilitonen kennengelernt, namens Bob. Um die Kommunikation zu erleichtern, hat Bob Alex empfohlen, die neue App  KAnnect zu installieren und ihn zu abonnieren. Zu Hause gibt Alex den Namen Bob im Suchfeld ein. Danach klickt er auf den Button ‘Abonnieren’. Dadurch bekommt er jetzt alle Beiträge von Bob auf seinem Feed angezeigt. Am Wochenende hat Alex Lust mit Bob feiern zu gehen, deswegen hat er ihm eine Nachricht über KAnnect geschrieben. Nach einigen Minuten öffnet er seine Mailbox und sieht, dass er eine Antwort von Bob erhalten hat. Der bestätigt das Treffen in einer Stunde am Schloss. Nach zwei Stunden warten am Schloss, beschließt Alex, sehr erzürnt, heimzugehen. Daheim angelangt geht Alex auf KAnnect und öffnet Bobs Profil und klickt “nicht mehr abonnieren”.
+		Alex ist ein neuer Student in Karlsruhe.  Während der O-Phase hat er einen Kommilitonen kennengelernt, namens Bob. Um die Kommunikation zu erleichtern, hat Bob Alex empfohlen, die neue App  KAnnect zu installieren und ihn zu abonnieren. Zu Hause gibt Alex den Namen Bob im Suchfeld ein. Danach klickt er auf den Button ‘Abonnieren’. Dadurch bekommt er jetzt alle Beiträge von Bob auf seinem \gls{Feed} angezeigt. Am Wochenende hat Alex Lust mit Bob feiern zu gehen, deswegen hat er ihm eine Nachricht über KAnnect geschrieben. Nach einigen Minuten öffnet er seine Mailbox und sieht, dass er eine Antwort von Bob erhalten hat. Der bestätigt das Treffen in einer Stunde am Schloss. Nach zwei Stunden warten am Schloss, beschließt Alex, sehr erzürnt, heimzugehen. Daheim angelangt geht Alex auf KAnnect und öffnet Bobs Profil und klickt “nicht mehr abonnieren”.
 		
 		\subsubsection{Gruppen}
 		Die neue Hochschulgruppe „Technologien für Studenten“ möchte ihre Neuigkeiten den Studenten präsentieren. Alex, ein Verantwortlicher der Gruppe meldet sich mit seinem Konto an. Er drückt in der App auf “Gruppe erstellen” und muss nun ein Formular ausfüllen. Nachdem er das gemacht hat, drückt er “Bestätigen” und die Gruppe wird zu der Liste der gefolgten Gruppen hinzugefügt %Link zu GUI
-		Bob ist ein Student und interessiert sich für diese Gruppe. Er meldet sich in der App an und gibt den Namen der Gruppe in das Suchfeld ein. Nun wird ihm die gesuchte Gruppe angezeigt. Er klickt auf „Gruppe beitreten“ und kann nun alle Beiträge in der Gruppe sehen. Diese werden ihm nun auch in seinem Feed angezeigt. Bob fragt sich, wie man Mitglied der Hochschulgruppe werden kann, weshalb er einen Beitrag in der Gruppe veröffentlicht. Nach rund fünf Minuten sieht Alex den Beitrag von Bob und erklärt den Bewerbungsprozess, indem er den Beitrag kommentiert. Da Alex davon ausgeht, dass noch mehr Leute dieselbe Frage haben, verfasst er einen Beitrag über den Bewerbungsprozess und veröffentlicht diesen in der Gruppe. Nach der Veröffentlichung bemerkt Alex, dass er einen veralteten Prozess erläutert hat. Deswegen klickt er auf „Beitrag löschen“.
+		Bob ist ein Student und interessiert sich für diese Gruppe. Er meldet sich in der App an und gibt den Namen der Gruppe in das Suchfeld ein. Nun wird ihm die gesuchte Gruppe angezeigt. Er klickt auf „Gruppe beitreten“ und kann nun alle Beiträge in der Gruppe sehen. Diese werden ihm nun auch in seinem \gls{Feed} angezeigt. Bob fragt sich, wie man Mitglied der Hochschulgruppe werden kann, weshalb er einen Beitrag in der Gruppe veröffentlicht. Nach rund fünf Minuten sieht Alex den Beitrag von Bob und erklärt den Bewerbungsprozess, indem er den Beitrag kommentiert. Da Alex davon ausgeht, dass noch mehr Leute dieselbe Frage haben, verfasst er einen Beitrag über den Bewerbungsprozess und veröffentlicht diesen in der Gruppe. Nach der Veröffentlichung bemerkt Alex, dass er einen veralteten Prozess erläutert hat. Deswegen klickt er auf „Beitrag löschen“.
 		Da Bob nach einer Woche immer noch keine richtige Antwort erhalten hat, tritt er aus der Gruppe aus.
 		Bob bemerkt, dass seine Gruppe “O-Phase 2014” nicht mehr aktiv ist, und will sie löschen. Er geht auf der Seite der Gruppe und klickt auf „Gruppe löschen“. Nachdem er “Bestätigen” klickt, wird die Gruppe gelöscht.
 		
@@ -907,7 +1040,7 @@
 		Auf der Hauptseite klickt er auf den Button "Veranstaltungen" und befindet sich nun auf einer neuen Seite, auf der alle Veranstaltungen nach Datum sortiert sind. Oben sind die Veranstaltungen, die heute stattfinden werden, weiter unten die der kommenden Tage und Wochen.
 		Da ihm so viele Veranstaltungen angezeigt werden, will er die Veranstaltungen filtern. Er klickt auf "eine Veranstaltungskategorie wählen" und sieht alle Kategorien wie "Sport" "Studium" "Nightclubs" "Bars \& Pubs" "Essen" usw. 
 		Dann wählt er "Bars \& Pubs" und die Seite aktualisiert sich. Nun werden nur die Veranstaltungen angezeigt, die etwas mit der Kategorie zu tun haben.
-		Er sieht, dass eine Bar heute von 17 bis 19 Uhr Happy Hour mit Live Musik anbietet. Er klickt auf die Veranstaltung, um weitere Details zu sehen. Er befindet sich nun auf der Seite der Veranstaltung. Dort werden ihm veröffentlichte Beiträge der Veranstaltung angezeigt. Nach einer kurzen Diskussion, entscheiden sich Manfred und Siegfried in diese Bar zu gehen. Um neue Informationen über die Veranstaltung in seinem Feed angezeigt zu bekommen, klickt Manfred auf "Veranstaltung abonnieren". Außerdem wollen sie später noch zu irgendeiner Party gehen. Ganz oben auf der Veranstaltungsseite ist ein Suchfeld "Veranstaltungen suchen". Da gibt er "Party" ein und die Seite aktualisiert sich. Nun werden ihm alle Veranstaltungen die das Schlüsselwort "Party" haben angezeigt. Er mag diese Veranstaltungen nicht und entscheidet sich, eine eigene Party zu schmeißen. Er redet mit Siegfried und sie machen die Partyvorbereitungen zusammen. Sie wollen jeden einladen, der mitfeiern will. Er geht auf "Erstelle neue Veranstaltung" und bekommt ein Formular von der App: 
+		Er sieht, dass eine Bar heute von 17 bis 19 Uhr Happy Hour mit Live Musik anbietet. Er klickt auf die Veranstaltung, um weitere Details zu sehen. Er befindet sich nun auf der Seite der Veranstaltung. Dort werden ihm veröffentlichte Beiträge der Veranstaltung angezeigt. Nach einer kurzen Diskussion, entscheiden sich Manfred und Siegfried in diese Bar zu gehen. Um neue Informationen über die Veranstaltung in seinem \gls{Feed} angezeigt zu bekommen, klickt Manfred auf "Veranstaltung abonnieren". Außerdem wollen sie später noch zu irgendeiner Party gehen. Ganz oben auf der Veranstaltungsseite ist ein Suchfeld "Veranstaltungen suchen". Da gibt er "Party" ein und die Seite aktualisiert sich. Nun werden ihm alle Veranstaltungen die das Schlüsselwort "Party" haben angezeigt. Er mag diese Veranstaltungen nicht und entscheidet sich, eine eigene Party zu schmeißen. Er redet mit Siegfried und sie machen die Partyvorbereitungen zusammen. Sie wollen jeden einladen, der mitfeiern will. Er geht auf "Erstelle neue Veranstaltung" und bekommt ein Formular von der App: 
 		
 		%link zu gui
 		
@@ -915,14 +1048,108 @@
 		
 		Eine Woche später möchte er wieder so eine Party schmeißen und erstellt wieder eine neue Veranstaltung in der App. Am nächsten Tag bekommt er seine Klausurergebnisse und ihm gefallen seine Noten überhaupt nicht. Deswegen möchte er sich mehr auf sein Studium konzentrieren und sagt die Party ab. Er öffnet KAnnect und navigiert auf die Seite seiner erstellten Veranstaltung. Dann klickt er auf “Veranstaltung löschen”.
 		
-		\subsubsection{Feed}
-		Bob öffnet KAnnect und möchte sein Feed durchschauen. Er sieht die Beiträge seiner Freunde, seiner abonnierten Veranstaltungen und seiner gefolgten Gruppen in chronologische Reihenfolge.
+		\subsubsection{\gls{Feed}}
+		Bob öffnet KAnnect und möchte sein \gls{Feed} durchschauen. Er sieht die Beiträge seiner Freunde, seiner abonnierten Veranstaltungen und seiner gefolgten Gruppen in chronologische Reihenfolge.
 		Bob will auf ein Beitrag reagieren , er klickt “Gefällt mir”, weil ein Freund von ihm was Lustiges gepostet hat. Er ist die 16.te Person, die den Beitrag mit “Gefällt mir” markiert hat. Außerdem kommentiert er den Beitrag, daraufhin merkt er, dass auch diese chronologisch sortiert sind.
-		
+	
 	\subsection{Anwendungsfälle}
 	
+	\newpage
 	\section{Grafische Benutzeroberfläche}
+	Die folgenden Darstellungen der Benutzeroberfläche sind Skizzen und dienen zum Verdeutlichen des groben Aufbaus der App. Das Endprodukt kann von ihnen abweichen.
+	Die dargestellten Ansichten sind: 
+	\begin{itemize}
+		\item Abbildung \ref{Registrierung} Registrierung
+		\item Abbildung \ref{PersönlicherFeed} Feed: Dies ist die Hauptansicht. Der Nutzer wird zu dieser Ansicht weitergeleitet nachdem er sich registriert oder angemeldet hat.
+		\item Abbildung \ref{Menü} zeigt das Menü. Mit diesem kann der Nutzer durch die App navigieren
+		\item Abbildung \ref{OffenesMenü} geöffnetes Menü: Im Hintergrund ist der \gls{Feed} (Abbildung \ref{PersönlicherFeed}) dargestellt
+		\item Abbildung \ref{Veranstaltung} Veranstaltung
+		\item Abbildung \ref{FormularVeranstaltung} Formular: Muss ausgefüllt werden um eine Veranstaltung zu erstellen. Ein ähnliches Formular wird zum erstellen einer Gruppe angezeigt
+		\item Abbildung \ref{Gruppe} Gruppe
+		\item Abbildung \ref{BeitragMitKommentaren} zeigt ein Beitrag und die dazugehörende Kommentare
+		\item Abbildung \ref{Briefkasten} Briefkasten
+		\item Abbildung \ref{Nachricht} Nachricht verfassen
+	\end{itemize}
+
+\newpage	
 	
+		\begin{figure}[h]
+			\centering
+			\includegraphics[height=8cm]{Registrierung}
+			\caption{Registrierung}
+			\label{Registrierung}
+		\end{figure}
+
+		\begin{figure}[h]
+			\centering
+			\includegraphics[height=8cm]{PFeed}
+			\caption{Persönlicher Feed}
+			\label{PersönlicherFeed}
+			\hypertarget{PFeed}{}
+		\end{figure}
+		
+		\begin{figure}[h]
+			\centering
+			\includegraphics[height=8cm]{Menu}
+			\caption{Menü}
+			\label{Menü}
+		\end{figure}
+			
+		\begin{figure}[h]
+			\centering
+			\includegraphics[height=8cm]{MenuOpened}
+			\caption{Geöffnetes Menü}
+			\label{OffenesMenü}
+		\end{figure}
+				
+		\begin{figure}[h]
+			\centering
+			\includegraphics[height=8cm]{Event}
+			\caption{Veranstaltung}
+			\label{Veranstaltung}
+		\end{figure}
+			
+			
+		\begin{figure}[h]
+			\centering
+			\includegraphics[height=8cm]{FormularVeranstaltung}
+			\caption{Formular zum erstellen einer Veranstaltung}
+			\label{FormularVeranstaltung}
+		\end{figure}
+		
+						
+		\begin{figure}[h]
+			\centering
+			\includegraphics[height=8cm]{Group}
+			\caption{Gruppe}
+			\label{Gruppe}
+		\end{figure}
+	
+
+		
+		\begin{figure}[h]
+			\centering
+			\includegraphics[height=8cm]{PubComments}
+			\caption{Beitrag mit Kommentaren}
+			\label{BeitragMitKommentaren}
+		\end{figure}
+			
+		\begin{figure}[h]
+			\centering
+			\includegraphics[height=8cm]{Briefkasten}
+			\caption{Briefkasten}
+			\label{Briefkasten}
+		\end{figure}
+				
+		\begin{figure}[h]
+			\centering
+			\includegraphics[height=8cm]{Message}
+			\caption{Nachicht verfassen}
+			\label{Nachricht}
+		\end{figure}
+		\newpage
+		
+		
 	\section{Durchführbarkeitsanalyse}
 	
 	\subsection{Technische Durchführbarkeit}
@@ -932,6 +1159,6 @@
 	
 	
 		
-	
+\printnoidxglossaries
 	
 \end{document}
