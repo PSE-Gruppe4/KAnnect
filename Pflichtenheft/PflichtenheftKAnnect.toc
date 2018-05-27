@@ -2,43 +2,46 @@
 \contentsline {section}{\numberline {1}Zielbestimmung}{4}{section.1}
 \contentsline {subsection}{\numberline {1.1}Musskriterien}{4}{subsection.1.1}
 \contentsline {subsection}{\numberline {1.2}Wunschkriterien}{4}{subsection.1.2}
-\contentsline {subsection}{\numberline {1.3}Abgrenzungskriterien}{4}{subsection.1.3}
+\contentsline {subsection}{\numberline {1.3}Abgrenzungskriterien}{5}{subsection.1.3}
 \contentsline {section}{\numberline {2}Produkteinsatz}{6}{section.2}
 \contentsline {subsection}{\numberline {2.1}Anwendungsbereiche}{6}{subsection.2.1}
 \contentsline {subsection}{\numberline {2.2}Zielgruppen}{6}{subsection.2.2}
 \contentsline {subsection}{\numberline {2.3}Betriebsbedingungen}{6}{subsection.2.3}
-\contentsline {section}{\numberline {3}Produktumgebung}{6}{section.3}
-\contentsline {subsection}{\numberline {3.1}Software}{6}{subsection.3.1}
-\contentsline {subsection}{\numberline {3.2}Hardware}{6}{subsection.3.2}
-\contentsline {section}{\numberline {4}Funktionale Anforderungen}{7}{section.4}
-\contentsline {subsection}{\numberline {4.1}Freunde}{7}{subsection.4.1}
-\contentsline {subsection}{\numberline {4.2}Gruppe}{8}{subsection.4.2}
-\contentsline {subsection}{\numberline {4.3}Veranstaltungen}{9}{subsection.4.3}
-\contentsline {subsection}{\numberline {4.4}Beitr\IeC {\"a}ge}{11}{subsection.4.4}
-\contentsline {subsection}{\numberline {4.5}Konto}{14}{subsection.4.5}
-\contentsline {subsection}{\numberline {4.6}Nachrichten}{16}{subsection.4.6}
-\contentsline {subsection}{\numberline {4.7}\gls {Feed}}{17}{subsection.4.7}
-\contentsline {section}{\numberline {5}Produktdaten}{19}{section.5}
-\contentsline {section}{\numberline {6}Nichfunktionale Anforderungen}{20}{section.6}
-\contentsline {section}{\numberline {7}Globale Testf\IeC {\"a}lle}{21}{section.7}
-\contentsline {subsection}{\numberline {7.1}Freunde}{21}{subsection.7.1}
-\contentsline {subsection}{\numberline {7.2}Gruppe}{21}{subsection.7.2}
-\contentsline {subsection}{\numberline {7.3}Veranstaltungen}{22}{subsection.7.3}
-\contentsline {subsection}{\numberline {7.4}Beitr\IeC {\"a}ge}{23}{subsection.7.4}
-\contentsline {subsection}{\numberline {7.5}Konto}{23}{subsection.7.5}
-\contentsline {subsection}{\numberline {7.6}Nachrichten}{23}{subsection.7.6}
-\contentsline {subsection}{\numberline {7.7}Feed}{23}{subsection.7.7}
-\contentsline {section}{\numberline {8}Systemmodelle}{24}{section.8}
-\contentsline {subsection}{\numberline {8.1}Szenarien}{24}{subsection.8.1}
-\contentsline {subsubsection}{\numberline {8.1.1}Registrierung}{24}{subsubsection.8.1.1}
-\contentsline {subsubsection}{\numberline {8.1.2}Freunde}{24}{subsubsection.8.1.2}
-\contentsline {subsubsection}{\numberline {8.1.3}Gruppen}{24}{subsubsection.8.1.3}
-\contentsline {subsubsection}{\numberline {8.1.4}Veranstaltungen}{24}{subsubsection.8.1.4}
-\contentsline {subsubsection}{\numberline {8.1.5}\gls {Feed}}{25}{subsubsection.8.1.5}
-\contentsline {subsection}{\numberline {8.2}Anwendungsf\IeC {\"a}lle}{25}{subsection.8.2}
-\contentsline {section}{\numberline {9}Grafische Benutzeroberfl\IeC {\"a}che}{26}{section.9}
-\contentsline {section}{\numberline {10}Durchf\IeC {\"u}hrbarkeitsanalyse}{28}{section.10}
-\contentsline {subsection}{\numberline {10.1}Technische Durchf\IeC {\"u}hrbarkeit}{28}{subsection.10.1}
-\contentsline {subsection}{\numberline {10.2}Personelle Durchf\IeC {\"u}hrbarkeit}{28}{subsection.10.2}
-\contentsline {subsection}{\numberline {10.3}Alternative L\IeC {\"o}sungsvorschl\IeC {\"a}ge}{28}{subsection.10.3}
-\contentsline {subsection}{\numberline {10.4}Risiken}{28}{subsection.10.4}
+\contentsline {section}{\numberline {3}Produktumgebung}{7}{section.3}
+\contentsline {subsection}{\numberline {3.1}Software}{7}{subsection.3.1}
+\contentsline {subsection}{\numberline {3.2}Hardware}{7}{subsection.3.2}
+\contentsline {section}{\numberline {4}Funktionale Anforderungen}{8}{section.4}
+\contentsline {subsection}{\numberline {4.1}Freunde}{8}{subsection.4.1}
+\contentsline {subsection}{\numberline {4.2}Gruppe}{10}{subsection.4.2}
+\contentsline {subsection}{\numberline {4.3}Veranstaltungen}{12}{subsection.4.3}
+\contentsline {subsection}{\numberline {4.4}Beitr\IeC {\"a}ge}{14}{subsection.4.4}
+\contentsline {subsection}{\numberline {4.5}Konto}{18}{subsection.4.5}
+\contentsline {subsection}{\numberline {4.6}Nachrichten}{20}{subsection.4.6}
+\contentsline {subsection}{\numberline {4.7}\gls {Feed}}{21}{subsection.4.7}
+\contentsline {section}{\numberline {5}Produktdaten}{22}{section.5}
+\contentsline {section}{\numberline {6}Nichfunktionale Anforderungen}{23}{section.6}
+\contentsline {section}{\numberline {7}Globale Testf\IeC {\"a}lle}{24}{section.7}
+\contentsline {subsection}{\numberline {7.1}Allgemein}{24}{subsection.7.1}
+\contentsline {subsection}{\numberline {7.2}Freunde}{25}{subsection.7.2}
+\contentsline {subsection}{\numberline {7.3}Gruppe}{25}{subsection.7.3}
+\contentsline {subsection}{\numberline {7.4}Veranstaltungen}{26}{subsection.7.4}
+\contentsline {subsection}{\numberline {7.5}Beitr\IeC {\"a}ge}{27}{subsection.7.5}
+\contentsline {subsection}{\numberline {7.6}Konto}{28}{subsection.7.6}
+\contentsline {subsection}{\numberline {7.7}Nachrichten}{29}{subsection.7.7}
+\contentsline {subsection}{\numberline {7.8}\gls {Feed}}{29}{subsection.7.8}
+\contentsline {section}{\numberline {8}Systemmodelle}{30}{section.8}
+\contentsline {subsection}{\numberline {8.1}Szenarien}{30}{subsection.8.1}
+\contentsline {subsubsection}{\numberline {8.1.1}Registrierung}{30}{subsubsection.8.1.1}
+\contentsline {subsubsection}{\numberline {8.1.2}Freunde}{30}{subsubsection.8.1.2}
+\contentsline {subsubsection}{\numberline {8.1.3}Gruppen}{30}{subsubsection.8.1.3}
+\contentsline {subsubsection}{\numberline {8.1.4}Veranstaltungen}{30}{subsubsection.8.1.4}
+\contentsline {subsubsection}{\numberline {8.1.5}\gls {Feed}}{31}{subsubsection.8.1.5}
+\contentsline {subsection}{\numberline {8.2}Anwendungsf\IeC {\"a}lle}{32}{subsection.8.2}
+\contentsline {section}{\numberline {9}Grafische Benutzeroberfl\IeC {\"a}che}{33}{section.9}
+\contentsline {section}{\numberline {10}Durchf\IeC {\"u}hrbarkeitsanalyse}{39}{section.10}
+\contentsline {subsection}{\numberline {10.1}Technische Durchf\IeC {\"u}hrbarkeit}{39}{subsection.10.1}
+\contentsline {subsubsection}{\numberline {10.1.1}Software}{39}{subsubsection.10.1.1}
+\contentsline {subsubsection}{\numberline {10.1.2}Hardware}{39}{subsubsection.10.1.2}
+\contentsline {subsection}{\numberline {10.2}Personelle Durchf\IeC {\"u}hrbarkeit}{39}{subsection.10.2}
+\contentsline {subsection}{\numberline {10.3}Alternative L\IeC {\"o}sungsvorschl\IeC {\"a}ge}{39}{subsection.10.3}
+\contentsline {subsection}{\numberline {10.4}Risiken}{39}{subsection.10.4}
