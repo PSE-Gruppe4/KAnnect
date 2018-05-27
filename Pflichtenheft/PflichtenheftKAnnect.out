@@ -20,17 +20,24 @@
 \BOOKMARK [1][-]{section.5}{Produktdaten}{}% 20
 \BOOKMARK [1][-]{section.6}{Nichfunktionale Anforderungen}{}% 21
 \BOOKMARK [1][-]{section.7}{Globale Testf\344lle}{}% 22
-\BOOKMARK [1][-]{section.8}{Systemmodelle}{}% 23
-\BOOKMARK [2][-]{subsection.8.1}{Szenarien}{section.8}% 24
-\BOOKMARK [3][-]{subsubsection.8.1.1}{Registrierung}{subsection.8.1}% 25
-\BOOKMARK [3][-]{subsubsection.8.1.2}{Freunde}{subsection.8.1}% 26
-\BOOKMARK [3][-]{subsubsection.8.1.3}{Gruppen}{subsection.8.1}% 27
-\BOOKMARK [3][-]{subsubsection.8.1.4}{Veranstaltungen}{subsection.8.1}% 28
-\BOOKMARK [3][-]{subsubsection.8.1.5}{Feed}{subsection.8.1}% 29
-\BOOKMARK [2][-]{subsection.8.2}{Anwendungsf\344lle}{section.8}% 30
-\BOOKMARK [1][-]{section.9}{Grafische Benutzeroberfl\344che}{}% 31
-\BOOKMARK [1][-]{section.10}{Durchf\374hrbarkeitsanalyse}{}% 32
-\BOOKMARK [2][-]{subsection.10.1}{Technische Durchf\374hrbarkeit}{section.10}% 33
-\BOOKMARK [2][-]{subsection.10.2}{Personelle Durchf\374hrbarkeit}{section.10}% 34
-\BOOKMARK [2][-]{subsection.10.3}{Alternative L\366sungsvorschl\344ge}{section.10}% 35
-\BOOKMARK [2][-]{subsection.10.4}{Risiken}{section.10}% 36
+\BOOKMARK [2][-]{subsection.7.1}{Freunde}{section.7}% 23
+\BOOKMARK [2][-]{subsection.7.2}{Gruppe}{section.7}% 24
+\BOOKMARK [2][-]{subsection.7.3}{Veranstaltungen}{section.7}% 25
+\BOOKMARK [2][-]{subsection.7.4}{Beitr\344ge}{section.7}% 26
+\BOOKMARK [2][-]{subsection.7.5}{Konto}{section.7}% 27
+\BOOKMARK [2][-]{subsection.7.6}{Nachrichten}{section.7}% 28
+\BOOKMARK [2][-]{subsection.7.7}{Feed}{section.7}% 29
+\BOOKMARK [1][-]{section.8}{Systemmodelle}{}% 30
+\BOOKMARK [2][-]{subsection.8.1}{Szenarien}{section.8}% 31
+\BOOKMARK [3][-]{subsubsection.8.1.1}{Registrierung}{subsection.8.1}% 32
+\BOOKMARK [3][-]{subsubsection.8.1.2}{Freunde}{subsection.8.1}% 33
+\BOOKMARK [3][-]{subsubsection.8.1.3}{Gruppen}{subsection.8.1}% 34
+\BOOKMARK [3][-]{subsubsection.8.1.4}{Veranstaltungen}{subsection.8.1}% 35
+\BOOKMARK [3][-]{subsubsection.8.1.5}{Feed}{subsection.8.1}% 36
+\BOOKMARK [2][-]{subsection.8.2}{Anwendungsf\344lle}{section.8}% 37
+\BOOKMARK [1][-]{section.9}{Grafische Benutzeroberfl\344che}{}% 38
+\BOOKMARK [1][-]{section.10}{Durchf\374hrbarkeitsanalyse}{}% 39
+\BOOKMARK [2][-]{subsection.10.1}{Technische Durchf\374hrbarkeit}{section.10}% 40
+\BOOKMARK [2][-]{subsection.10.2}{Personelle Durchf\374hrbarkeit}{section.10}% 41
+\BOOKMARK [2][-]{subsection.10.3}{Alternative L\366sungsvorschl\344ge}{section.10}% 42
+\BOOKMARK [2][-]{subsection.10.4}{Risiken}{section.10}% 43

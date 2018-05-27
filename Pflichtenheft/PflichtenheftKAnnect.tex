@@ -1005,7 +1005,86 @@
 	\subsection{Gruppe}
 	
 		\begin{itemize}
-			\item[T20] 
+		\item[T200] Erstellen einer Gruppe
+		\begin{enumerate}
+			\item
+			
+			\begin{enumerate}[nosep]
+				\item Stand: Ansicht Gruppe ist geöffnet
+				\item Aktion: Auf “Gruppe erstellen” klicken
+				\item Reaktion: Ein Formular zum Erstellen der  Gruppe erscheint
+			\end{enumerate}
+			\item
+			\begin{enumerate}[nosep]	
+				\item Stand: Formular zum erstellen einer Gruppe ist geöffnet
+				\item Aktion: Daten eingeben und “Bestätigen” klicken
+				\item Reaktion: Gruppe wird erstellt und zu den Gruppen hinzugefügt. Nutzer wird zur Seite der Gruppe geleitet
+			\end{enumerate}	
+		\end{enumerate}
+		
+		\item[T201] Bearbeiten einer Gruppe
+		\begin{enumerate}
+			\item
+			
+			\begin{enumerate}[nosep]
+				\item Stand: Seite der Gruppe
+				\item Aktion: Ersteller der Gruppe klickt auf “Gruppe bearbeiten”
+				\item Reaktion: Das Formular mit allen Informationen über die Gruppe erscheint
+			\end{enumerate}
+			\item
+			\begin{enumerate}[nosep]	
+				\item Stand: Formular zum erstellen einer Gruppe ist geöffnet
+				\item Aktion:  die Daten ändern (ZB : Name ändern) und “Bestätigen” klicken
+				\item Reaktion: Daten werden geändert und Nutzer wird zur Seite der Gruppe geleitet
+			\end{enumerate}	
+		\end{enumerate}
+		
+		\item[T202] Gruppe beitreten
+		\begin{enumerate}
+			\item
+			
+			\begin{enumerate}[nosep]
+				\item Stand: Seite der Gruppe
+				\item Aktion:  Auf “Gruppe beitreten” klicken
+				\item Reaktion:  Nutzer wird zur Liste der Abonnenten der Gruppe hinzugefügt und bekommt alle zukünftigen Beiträge der Gruppe auf seinem Feed angezeigt. Button “Gruppe beitreten” wird zu “Aus Gruppe austreten”
+			\end{enumerate}
+			
+		\end{enumerate}
+		
+		\item[T203] Gruppe verlassen
+		\begin{enumerate}
+			\item
+			
+			\begin{enumerate}[nosep]
+				\item Stand: Seite der Gruppe
+				\item Aktion:  Mitglied der Gruppe klickt auf “Aus Gruppe austreten”
+				\item Reaktion:   Nutzer wird von der Liste der Abonnenten der Gruppe gelöscht. Er bekommt keine Beiträge der Gruppe mehr auf seinem Feed angezeigt. Button “Aus Gruppe austreten” wird zu “Gruppe beitreten”
+			\end{enumerate}
+			
+		\end{enumerate}		
+		
+			\item[T204] Gruppe löschen
+			\begin{enumerate}
+				\item
+				
+				\begin{enumerate}[nosep]
+					\item Stand: Seite der Gruppe
+					\item Aktion: Ersteller der Gruppe klickt auf “Gruppe löschen”
+					\item Reaktion: Dialogfenster erscheint “Aktion bestätigen”
+				\end{enumerate}
+				
+				\item
+				
+				\begin{enumerate}[nosep]
+					\item Stand: Im Dialogfenster sind die Buttons « Ja » oder « Nein »
+					\item Aktion: Eine Entscheidung Treffen und einer der beiden Buttons wählen
+					\item Reaktion: Wenn « Ja » dann wird Gruppe gelöscht und Ersteller zu seinem Feed geleitet
+					Wenn  «  Nein » dann wird Ersteller zu der Seite der Gruppe geleitet.
+					
+				\end{enumerate}
+				
+			\end{enumerate}		
+		
 		\end{itemize}
 
 
@@ -1046,7 +1125,7 @@
 			\end{enumerate}	
 		\end{enumerate}
 		
-		\item[T301] Löschen einer Veranstaltung
+		\item[T302] Löschen einer Veranstaltung
 		\begin{enumerate}
 			\item
 			
@@ -1064,7 +1143,52 @@
 			\end{enumerate}	
 		\end{enumerate}
 		
+		\item[T303] Veranstaltung abonnieren
+		\begin{enumerate}
+			\item
+			
+			\begin{enumerate}[nosep]
+				\item Stand: Seite der Veranstaltung
+				\item Aktion: Nutzer drückt “Veranstaltung abonnieren”
+				\item Reaktion:Nutzer wird zur Abonnentenliste der Veranstaltung hinzugefügt und bekommt alle zukünftigen Beiträge auf seinem Feed angezeigt. “Veranstaltung abonnieren” Button wird zu “Veranstaltung nicht mehr abonnieren.
+
+			\end{enumerate}
+		\end{enumerate}
 		
+		\item[T304] Veranstaltung nicht mehr abonnieren
+		\begin{enumerate}
+			\item
+			
+			\begin{enumerate}[nosep]
+				\item Stand: Seite der Veranstaltung
+				\item Aktion: Abonnent der Veranstaltung klickt auf “Veranstaltung nicht mehr abonnieren”
+				\item Reaktion: Nutzer wird von der Liste der Abonnenten gelöscht. Er bekommt keine zukünftige Beiträge der Veranstaltung auf seinem Feed angezeigt. Button “Veranstaltung nicht mehr abonnieren” wird zu “Veranstaltung abonnieren”
+			\end{enumerate}
+		\end{enumerate}
+		
+			\item[T305] Anzeige des Ortes der Veranstaltungen auf der Karte
+			\begin{enumerate}
+				\item
+				
+				\begin{enumerate}[nosep]
+					\item Stand: Seite der Veranstaltung
+					\item Aktion: Auf die Karte navigieren
+					\item Reaktion: Eine Karte erscheint dem Standorte der Veranstaltungen
+					
+				\end{enumerate}
+			\end{enumerate}
+			
+			\item[T306] Synchronisation der Karte beim Erstellen neuer Veranstaltungen
+			\begin{enumerate}
+				\item
+				
+				\begin{enumerate}[nosep]
+					\item Stand: Seite der Karte
+					\item Aktion: Eine neue Veranstaltung erstellen
+					\item Reaktion: Die Karte wird aktualisiert und der Standort der neue Veranstaltung wird  hinzugefügt.
+					
+				\end{enumerate}
+			\end{enumerate}
 		
 		\end{itemize}
 	
